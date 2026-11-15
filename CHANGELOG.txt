@@ -1,0 +1,100 @@
+SPACE RELICS — CHANGELOG
+========================
+Format: session → files → features → fixes → data → decisions.
+
+================================================================================
+2026-11-15 · SESSION 001 · first instance (project inception → presentation-ready)
+================================================================================
+
+FILES ADDED
+  PROJECT_PLAN.txt, PROGRESS.txt, HANDOFF.txt, CHANGELOG.txt,
+  RESEARCH_SOURCES.txt, DATA_AUDIT.txt, README.md, PRESENTATION.md
+  index.html, vite.config.js, package.json
+  src/main.jsx, src/App.jsx, src/styles/global.css, src/utils/data.js
+  src/components/{Layout,ArtifactCard,Filters,PlanetMap,ui}.jsx
+  src/pages/{Home,Explorer,ArtifactDetail,MapPage,TimelinePage,LegacyPage,
+             ComparePage,AboutPage}.jsx
+  src/data/{artifacts,sources,missions,planets,categories,statuses,themes,meta}.json
+  src/assets/images/ (14 NASA images)
+  scripts/{build-data.py,validate-data.mjs,build-docs.py}
+  research/DATA_VALIDATION_REPORT.txt
+
+FEATURES IMPLEMENTED
+  - Home: hero (Apollo 17 site), project statement, live dataset statistics,
+    two planet entry points, four featured records, science-legacy teaser,
+    verification explainer, "start here" panel, closing CTA.
+  - Relic Explorer: 13 cards, full-text search over names/missions/regions/
+    instruments/themes/facts, filters for planet, category, physical status,
+    mission and science theme, four sort orders, per-filter counts, reset,
+    result counter, empty state.
+  - Artifact detail: hero with media + badges, eight numbered story sections,
+    at-a-glance specs, location panel with coordinate provenance, research-notes
+    panel, captioned media with NASA id, verified timeline, sources, related
+    records.
+  - Planetary map: Moon/Mars switch, viewport auto-fitted to the records in
+    view, real 5°/10°/30°/60° graticule, surveyed vs approximate marker styles,
+    co-location offsets with leader lines, mission labels, selection panel,
+    ?focus= deep links, explicit "schematic, not a basemap" legend and note.
+  - Mission timeline: 52 dated events across 1967–2022, planet and event-type
+    filters, decade jump links, event-type legend, operational-life caveat.
+  - Science Legacy: 8 themes with summaries, contributing artifacts and an
+    editorial rule on attribution; ?theme= deep links.
+  - Compare: two records across 11 attributes with differing rows highlighted
+    and a swap control; ?a=&b= deep links.
+  - About & Sources: purpose, challenge context, what is curated vs live,
+    methodology, verification states with counts, six documented limitations,
+    image attribution table, full 28-entry bibliography with read level.
+  - Cross-cutting: hash router, responsive layout to 390 px, mobile nav,
+    image fallbacks, not-found states, reduced-motion support, keyboard-
+    operable map markers.
+
+BUGS FIXED (found during this session's own QA)
+  - Detail hero: ::after scrim painted above the title, washing the heading out
+    → explicit z-index stacking.
+  - Map: Opportunity's published longitude 354.47° plotted off-canvas
+    → longitude normalised to −180…180 at render time.
+  - Map: region labels collided with markers → replaced with per-mission labels;
+    selected marker label only.
+  - Map: ?focus= did not switch planet → initial planet now derived from the
+    focused record.
+  - Compare: crash when ?a= named an unknown id → fallback to the first records.
+  - Apollo 15: mission period started a day after the landing timeline entry.
+  - Legacy: "1 artifacts" pluralisation.
+  - Layout.jsx: wrong relative import path broke the first build.
+  - Hero and detail hero imagery too dark/washed to read the titles
+    → re-tuned opacity and gradient stops.
+
+DATA ADDED
+  - 13 artifact records: Apollo 11 LM descent stage, Apollo 11 EASEP, Surveyor 3,
+    Apollo 14 ALSEP, Apollo 15 LRV, Apollo 16 FUV camera/spectrograph,
+    Apollo 17 LRV, Mars Pathfinder lander, Sojourner, Spirit, Opportunity,
+    InSight, Viking 1 lander.
+  - 11 mission records, 2 planet records, 5 categories, 3 physical statuses,
+    8 science themes, 28 sources, 14 NASA images.
+  - Coordinate provenance recorded per artifact: NSSDC landings table, LROC
+    anthropogenic-features survey (Wagner et al. 2016), Haase et al. 2019,
+    IPGP/IRIS SEIS metadata, mission press kits.
+
+DATA CORRECTED / RECONCILED
+  - Mars Pathfinder: three published coordinate sets recorded (19.13/33.22 NASA,
+    19.33/33.55 NSSDC, 19.17/33.21 JPL USGS frame); marker marked approximate.
+  - Viking 1: 47.94°W (NASA mission page) vs 47.968°W (Morris 1980) recorded.
+  - Surveyor 3 visit distance: 155 m vs 180 m recorded with both figures.
+  - Spirit recovery end: 25 May 2011 (NASA Science) vs 13 July 2011 (JPL report).
+  - Apollo 17 LRV: 35.7 km odometer vs 31.2 km recomputed path — both kept.
+
+DECISIONS CHANGED / TAKEN
+  - Added a 13th artifact (Viking 1) beyond the brief's 12 so the archive can
+    demonstrate "operational long after mission end" with a real case.
+  - Chose plain CSS tokens over Tailwind (fewer build plugins, same control).
+  - Chose a schematic SVG map over a tile map after confirming no planetary
+    basemap is reachable in this environment; the limitation is stated in-app.
+  - Chose a single-file build so the demo needs no server and no network.
+  - Kept two records at "partially verified" rather than rounding them up.
+
+TESTING
+  - npm run validate → PASS (0 errors, 0 warnings).
+  - npm run build → single file 3.54 MB, all imagery inlined.
+  - Headless Chromium: 8 routes + 2 error routes render; deep links and filters
+    verified by DOM assertions (13 / 6 cards, 5 legacy artifacts, 52 events).
+  - Screenshot review: 8 desktop pages, 400 px mobile viewport.

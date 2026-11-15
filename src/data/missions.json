@@ -1,0 +1,112 @@
+[
+ {
+  "id": "apollo-11",
+  "name": "Apollo 11",
+  "agency": "NASA",
+  "planet": "Moon",
+  "launch": "1969-07-16",
+  "arrival": "1969-07-20",
+  "end": "1969-07-24",
+  "summary": "First crewed landing on the Moon. Left the Eagle descent stage and the first surface experiment package at Tranquility Base."
+ },
+ {
+  "id": "apollo-14",
+  "name": "Apollo 14",
+  "agency": "NASA",
+  "planet": "Moon",
+  "launch": "1971-01-31",
+  "arrival": "1971-02-05",
+  "end": "1971-02-09",
+  "summary": "Landing in the Fra Mauro highlands; deployed the first ALSEP station to run through the lunar night."
+ },
+ {
+  "id": "apollo-15",
+  "name": "Apollo 15",
+  "agency": "NASA",
+  "planet": "Moon",
+  "launch": "1971-07-26",
+  "arrival": "1971-07-30",
+  "end": "1971-08-07",
+  "summary": "First mission with the Lunar Roving Vehicle and the first extended geological traverses at Hadley-Apennine."
+ },
+ {
+  "id": "apollo-16",
+  "name": "Apollo 16",
+  "agency": "NASA",
+  "planet": "Moon",
+  "launch": "1972-04-16",
+  "arrival": "1972-04-21",
+  "end": "1972-04-27",
+  "summary": "Descartes highlands mission that carried the first astronomical observatory to another world."
+ },
+ {
+  "id": "apollo-17",
+  "name": "Apollo 17",
+  "agency": "NASA",
+  "planet": "Moon",
+  "launch": "1972-12-07",
+  "arrival": "1972-12-11",
+  "end": "1972-12-19",
+  "summary": "The last crewed lunar landing. Taurus-Littrow, the longest traverses and the largest sample return."
+ },
+ {
+  "id": "surveyor-3",
+  "name": "Surveyor 3 / Apollo 12",
+  "agency": "NASA",
+  "planet": "Moon",
+  "launch": "1967-04-17",
+  "arrival": "1967-04-20",
+  "end": "1967-05-04",
+  "summary": "Robotic precursor lander later visited and sampled by the Apollo 12 crew."
+ },
+ {
+  "id": "mars-pathfinder",
+  "name": "Mars Pathfinder",
+  "agency": "NASA",
+  "planet": "Mars",
+  "launch": "1996-12-04",
+  "arrival": "1997-07-04",
+  "end": "1997-09-27",
+  "summary": "Airbag landing in Ares Vallis that carried Sojourner, the first rover on Mars."
+ },
+ {
+  "id": "mer-spirit",
+  "name": "Mars Exploration Rover — Spirit",
+  "agency": "NASA",
+  "planet": "Mars",
+  "launch": "2003-06-10",
+  "arrival": "2004-01-04",
+  "end": "2010-03-22",
+  "summary": "Gusev crater rover that found hydrothermal silica in the Columbia Hills and ran for six years."
+ },
+ {
+  "id": "mer-opportunity",
+  "name": "Mars Exploration Rover — Opportunity",
+  "agency": "NASA",
+  "planet": "Mars",
+  "launch": "2003-07-07",
+  "arrival": "2004-01-25",
+  "end": "2018-06-10",
+  "summary": "Meridiani Planum rover that found evidence of ancient salty water and drove 45.16 km."
+ },
+ {
+  "id": "insight",
+  "name": "InSight",
+  "agency": "NASA",
+  "planet": "Mars",
+  "launch": "2018-05-05",
+  "arrival": "2018-11-26",
+  "end": "2022-12-21",
+  "summary": "Geophysics station in Elysium Planitia that measured the interior of Mars with a seismometer."
+ },
+ {
+  "id": "viking-1",
+  "name": "Viking 1",
+  "agency": "NASA",
+  "planet": "Mars",
+  "launch": "1975-08-20",
+  "arrival": "1976-07-20",
+  "end": "1982-11-11",
+  "summary": "The first successful Mars lander, which operated as a weather station for more than six years."
+ }
+]

@@ -1,0 +1,223 @@
+PROJECT: SPACE RELICS — The Machines That Stayed Behind
+=======================================================
+
+LAST UPDATED : 2026-11-15
+CURRENT PHASE: Phases 0–6 complete. Project is presentation-ready (MVP+).
+CURRENT STATUS: All 8 screens implemented and working against a validated
+                13-record dataset. Build produces a single self-contained HTML
+                file. No known blocking defects.
+
+--------------------------------------------------------------------------------
+COMPLETED
+--------------------------------------------------------------------------------
+PHASE 0
+  [x] Environment inspected (Node 20.20.2, npm 10.8.2, Chromium available,
+      2.2 GB of imagery downloaded over the permitted NASA hosts).
+  [x] Vite + React project initialised, dependencies installed.
+  [x] PROJECT_PLAN.txt written in full (objectives, scope, architecture, schema,
+      method, UI spec, phases, testing, acceptance criteria, limitations).
+
+PHASE 1 — RESEARCH
+  [x] All 12 brief candidates investigated against primary sources.
+  [x] 1 additional artifact added (Viking 1 Lander) to represent hardware that
+      stayed operational long after its mission ended.
+  [x] 28 sources catalogued with URL, organisation, type, publication date,
+      access date, read level and the claims each supports.
+  [x] Coordinates obtained and cross-checked: NSSDC landings table, LROC
+      anthropogenic-features survey (Wagner et al. 2016), Haase et al. 2019,
+      IPGP/IRIS SEIS station metadata.
+  [x] 14 NASA images downloaded by NASA id, resized, captioned and credited.
+
+PHASE 2 — DATA
+  [x] Schema finalised (see PROJECT_PLAN.txt §4).
+  [x] artifacts.json (13 records), sources.json (28), missions.json (11),
+      planets.json (2), categories.json (5), statuses.json (3), themes.json (8).
+  [x] Authoring pipeline scripts/build-data.py -> src/data/*.json.
+  [x] scripts/validate-data.mjs written; PASS with 0 errors, 0 warnings.
+  [x] DATA_AUDIT.txt and RESEARCH_SOURCES.txt generated from the dataset by
+      scripts/build-docs.py (cannot drift from the shipped data).
+
+PHASE 3 — CORE UI
+  [x] Design tokens and global stylesheet (dark archive aesthetic).
+  [x] Sticky header with 7-item navigation + mobile menu; footer.
+  [x] Home page: hero, project statement, two planet entry points, featured
+      records, science-legacy teaser, verification explainer, start-here panel.
+  [x] Relic Explorer: 13 cards, search, 5 filters, 4 sort orders, live counts,
+      reset, empty state.
+  [x] Artifact detail page: hero, 8 numbered story sections, at-a-glance panel,
+      location panel with provenance note, research-notes panel, media caption,
+      verified timeline, sources, related records.
+
+PHASE 4 — ADVANCED FEATURES
+  [x] Planetary map: Moon/Mars switch, viewport fitted to the records in view,
+      real graticule, surveyed vs approximate markers, co-location offsets with
+      leader lines, mission labels, selection panel, deep link ?focus=<id>.
+  [x] Mission timeline: 52 dated events, planet + event-type filters, decade
+      jump links, event-type legend, "operational life ≠ mission length" note.
+  [x] Science Legacy: 8 themes with artifact attribution and editorial rule.
+  [x] Compare: any two records across 11 attributes, differing rows highlighted,
+      swap control.
+  [x] About & Sources: methodology, verification states, 6 documented
+      limitations, image attribution table, full bibliography.
+
+PHASE 5 — QA
+  [x] Production build succeeds; single-file output verified (3.54 MB, all
+      imagery inlined).
+  [x] Headless Chromium: all 8 routes render; deep links work; 404 states work;
+      /explorer=13 cards, ?planet=Mars=6, /legacy?theme=seismology=5,
+      /timeline=52 events.
+  [x] Screenshots reviewed for all 8 pages and a 400 px mobile viewport.
+  [x] Bugs found and fixed during QA:
+        - hero overlay painted above the detail-page title (z-index)
+        - Apollo 15 mission period start vs timeline order
+        - Mars longitudes >180 plotted off-canvas (Opportunity at 354.47°)
+        - map label collisions (replaced region labels with mission labels)
+        - compare page crash on an unknown ?a= id
+        - map ?focus= did not switch planet
+        - "1 artifacts" pluralisation
+        - hero/detail image contrast too low for legible titles
+
+PHASE 6 — PRESENTATION
+  [x] PRESENTATION.md: 10-slide content, 30-second pitch, 2–3 minute demo
+      script, research-methodology explanation, 12 likely judge questions with
+      answers, limitations and roadmap.
+
+--------------------------------------------------------------------------------
+IN PROGRESS
+--------------------------------------------------------------------------------
+  (nothing — the current session closed cleanly at a checkpoint)
+
+--------------------------------------------------------------------------------
+PENDING (optional, not required for the MVP)
+--------------------------------------------------------------------------------
+  [ ] Photographic planetary basemap (blocked: no offline lunar/Mars basemap is
+      reachable from this environment; documented as limitation L1).
+  [ ] Additional artifact records beyond the 13 (Apollo 12 ALSEP, Lunokhod 2,
+      Viking 2, Curiosity's discarded hardware, Apollo 16 ALSEP, etc.).
+  [ ] Published coordinates for Spirit at Troy, Opportunity in Perseverance
+      Valley and Sojourner's final position, to upgrade four site-level markers
+      to artifact-level markers.
+  [ ] Automated component tests (none exist; QA was manual + headless DOM).
+  [ ] Cross-browser pass beyond Chromium.
+  [ ] Optional: images-api.nasa.gov live imagery with bundled fallbacks.
+
+--------------------------------------------------------------------------------
+RESEARCH STATUS
+--------------------------------------------------------------------------------
+  Artifact candidates investigated : 12 of 12 from the brief, plus 1 addition
+  Records researched and written   : 13
+  Fully verified                   : 11
+  Partially verified               : 2   (Mars Pathfinder Lander — three
+                                           published coordinate sets;
+                                           Sojourner — final position unknown)
+  Unverified                       : 0   (no record is published as fact
+                                           without support)
+  Sources catalogued               : 28
+  Source read level                : all "excerpt" (the relevant passage of each
+                                     document was retrieved and read; no document
+                                     was read end-to-end) — stated honestly per
+                                     source rather than overclaimed.
+
+--------------------------------------------------------------------------------
+DATA STATUS
+--------------------------------------------------------------------------------
+  Valid records                    : 13 / 13 (validator: PASS, 0 errors,
+                                     0 warnings)
+  Records with missing information  : 0 blocking; 4 records carry site-level
+                                     rather than artifact-level coordinates,
+                                     and 2 carry partially verified status —
+                                     all stated in-record.
+  Image references                 : 13 primary + 1 hero = 14 files, each with
+                                     NASA id, catalogue title, caption, credit
+                                     and source URL. 0 external image
+                                     dependencies at runtime.
+  Source references                : 50 artifact→source links across 28 sources
+  Coordinate records               : 13 / 13 records have latitude+longitude —
+                                     7 surveyed ("exact"), 4 site-level, 2
+                                     approximate. The non-exact ones are
+                                     flagged in-record and drawn differently on
+                                     the map.
+  Science themes                   : 8, with 31 artifact→theme attributions
+
+--------------------------------------------------------------------------------
+APPLICATION STATUS
+--------------------------------------------------------------------------------
+  Completed screens  : 8 (Home, Explorer, Artifact detail, Planetary map,
+                       Mission timeline, Science legacy, Compare, About)
+  Working features   : routing + deep links, search, 5 filters, 4 sort orders,
+                       map selection and planet switch, timeline filters,
+                       theme navigation, two-artifact comparison, source links,
+                       image fallbacks, empty/404 states, responsive layout
+  Broken features    : none known
+  Remaining work     : optional items listed under PENDING
+
+--------------------------------------------------------------------------------
+TESTING STATUS
+--------------------------------------------------------------------------------
+  Executed:
+    - npm run validate -> PASS (0 errors / 0 warnings)
+    - npm run build    -> success, single-file 3.54 MB
+    - headless Chromium DOM assertions on 9 URLs (8 routes + 2 error routes)
+    - screenshot review: 8 desktop pages + mobile viewport
+  Unresolved bugs: none
+  Not tested: non-Chromium browsers, screen readers, very large datasets
+
+--------------------------------------------------------------------------------
+IMPORTANT DECISIONS (must be preserved by future instances)
+--------------------------------------------------------------------------------
+D1  The curated dataset is the single source of truth. No artifact fact may be
+    written into a React component; add it to scripts/build-data.py and rebuild.
+D2  Data is authored in scripts/build-data.py, not edited directly in
+    src/data/*.json (the JSON is generated). Re-run the script after any edit.
+D3  RESEARCH_SOURCES.txt and DATA_AUDIT.txt are generated by
+    scripts/build-docs.py from the dataset. Do not hand-edit them.
+D4  The map is schematic and says so. Do not add fabricated geography or
+    decorative "terrain" to make it look photographic.
+D5  Coordinates are never invented. If a source does not publish one, the record
+    stores null or falls back to a site-level coordinate with a map_note.
+D6  Source disagreements are recorded, not resolved silently (Pathfinder,
+    Viking 1, Apollo 17 odometer, Surveyor 3 visit distance, Spirit recovery
+    end date).
+D7  No live API at runtime. Imagery is bundled so the demo works offline.
+D8  Single-file build (vite-plugin-singlefile) so judges can open the product by
+    double-clicking one HTML file.
+D9  Plain CSS with tokens instead of Tailwind: fewer moving parts, no build
+    plugin, same visual control.
+D10 Verification badges are meaningful: 2 records are deliberately marked
+    "partially verified" rather than rounded up to "verified".
+
+--------------------------------------------------------------------------------
+KNOWN ISSUES
+--------------------------------------------------------------------------------
+I1  Map is a schematic plot, not a basemap (limitation L1 in PROJECT_PLAN.txt).
+I2  Four markers are site-level, not artifact-level (L2).
+I3  Two coordinate disagreements and one odometry disagreement are printed in
+    the records rather than resolved (L3, L4).
+I4  The dataset is finite (13 records) and does not attempt a census (L6).
+I5  Some time-sensitive facts (distance records, mission status) will age (L7).
+
+--------------------------------------------------------------------------------
+EXACT NEXT ACTION
+--------------------------------------------------------------------------------
+If continuing development: add Apollo 12's ALSEP station and Viking 2 Lander as
+records 14 and 15 (sources already partly in the bibliography), then re-run:
+    python3 scripts/build-data.py
+    npm run validate
+    python3 scripts/build-docs.py
+    npm run build
+and re-check /explorer card counts and /map marker placement.
+
+If the task is delivery: nothing further is required. The deliverable is
+dist/index.html (single self-contained file), plus the project archive.
+
+--------------------------------------------------------------------------------
+NEXT INSTANCE INSTRUCTIONS
+--------------------------------------------------------------------------------
+1. Read HANDOFF.txt first, then this file, then CHANGELOG.txt.
+2. Do NOT regenerate the project. It is complete and working.
+3. Never edit src/data/*.json by hand — edit scripts/build-data.py and rebuild.
+4. Before claiming any task done, run: npm run validate && npm run build, and
+   check the affected route in headless Chromium
+   (chromium --headless=new --dump-dom "file://$PWD/dist/index.html#/route").
+5. Preserve the honesty of the dataset: if a fact cannot be sourced, leave the
+   field null and write the gap into verification.notes.

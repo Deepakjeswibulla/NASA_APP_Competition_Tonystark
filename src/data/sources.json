@@ -1,0 +1,394 @@
+[
+ {
+  "source_id": "S01",
+  "title": "Apollo Lunar Landings (1969 - 1972)",
+  "organization": "NASA NSSDC",
+  "url": "https://nssdc.gsfc.nasa.gov/planetary/lunar/apolloland.html",
+  "source_type": "NASA data archive",
+  "publication_date": "n.d.",
+  "accessed": "2026-11-15",
+  "supports": [
+   "Apollo landing dates, sites and selenographic coordinates (DE421 mean Earth frame)"
+  ],
+  "read_level": "excerpt",
+  "notes": ""
+ },
+ {
+  "source_id": "S02",
+  "title": "Spacecraft Related Coordinates - 2016 Update (Wagner et al., Icarus)",
+  "organization": "LROC / NASA GSFC / ASU",
+  "url": "https://www.lroc.im-ldi.com/images/938",
+  "source_type": "Peer-reviewed + NASA instrument team",
+  "publication_date": "2016",
+  "accessed": "2026-11-15",
+  "supports": [
+   "Surveyed positions of Apollo hardware (LM, ALSEP, LRV) with ~15 m uncertainty"
+  ],
+  "read_level": "excerpt",
+  "notes": ""
+ },
+ {
+  "source_id": "S03",
+  "title": "Apollo 11 Preliminary Science Report - Passive Seismic Experiment section",
+  "organization": "NASA (via PDS Geosciences Node)",
+  "url": "https://an.rsl.wustl.edu/apollo/data/a11/stationLM/pse/docs/pse_psr.pdf",
+  "source_type": "NASA technical report",
+  "publication_date": "1969",
+  "accessed": "2026-11-15",
+  "supports": [
+   "EASEP/PSEP mass, deployment distance from the LM, 21-day operation, 27 Aug 1969 turn-off"
+  ],
+  "read_level": "excerpt",
+  "notes": ""
+ },
+ {
+  "source_id": "S04",
+  "title": "ALSEP Termination Report (NASA Reference Publication 1036)",
+  "organization": "NASA",
+  "url": "https://an.rsl.wustl.edu/apollo/data/A14/resources/ALSEP_termination.pdf",
+  "source_type": "NASA technical report",
+  "publication_date": "1979-04",
+  "accessed": "2026-11-15",
+  "supports": [
+   "ALSEP station coordinates, activation times, experiment list, 30 Sep 1977 termination, ASE depth"
+  ],
+  "read_level": "excerpt",
+  "notes": ""
+ },
+ {
+  "source_id": "S05",
+  "title": "Surveyor 3 - Mission Overview",
+  "organization": "NASA Science",
+  "url": "https://science.nasa.gov/mission/surveyor-3/",
+  "source_type": "NASA mission page",
+  "publication_date": "n.d.",
+  "accessed": "2026-11-15",
+  "supports": [
+   "Surveyor 3 launch/landing/last-contact dates, landing region, 6,326 images, Apollo 12 visit"
+  ],
+  "read_level": "excerpt",
+  "notes": ""
+ },
+ {
+  "source_id": "S06",
+  "title": "Footpads and Footprints: Humans and Machine Meet on the Moon",
+  "organization": "NASA Science",
+  "url": "https://science.nasa.gov/earth/moon/footpads-and-footprints-humans-and-machine-meet-on-the-moon/",
+  "source_type": "NASA feature article",
+  "publication_date": "n.d.",
+  "accessed": "2026-11-15",
+  "supports": [
+   "Surveyor 3 soil-mechanics result, distance from Apollo 12 LM, parts returned to Earth"
+  ],
+  "read_level": "excerpt",
+  "notes": ""
+ },
+ {
+  "source_id": "S07",
+  "title": "Analysis of Surveyor 3 Material and Photographs Returned by Apollo 12",
+  "organization": "NASA (NTRS 19720019081)",
+  "url": "https://ntrs.nasa.gov/citations/19720019081",
+  "source_type": "NASA technical report",
+  "publication_date": "1972",
+  "accessed": "2026-11-15",
+  "supports": [
+   "Inventory of hardware removed from Surveyor 3, selenographic coordinates, 31 months exposure"
+  ],
+  "read_level": "excerpt",
+  "notes": ""
+ },
+ {
+  "source_id": "S08",
+  "title": "Apollo 15: A Mission of Many Firsts",
+  "organization": "LROC / NASA GSFC / ASU",
+  "url": "https://lroc.im-ldi.com/images/1198",
+  "source_type": "NASA instrument team article",
+  "publication_date": "2021-07-30",
+  "accessed": "2026-11-15",
+  "supports": [
+   "LRV traverse distances per EVA, final parking site ~160 m east of the LM, 27.9 km total"
+  ],
+  "read_level": "excerpt",
+  "notes": ""
+ },
+ {
+  "source_id": "S09",
+  "title": "Apollo 15 Mission Report, Chapter 1",
+  "organization": "NASA (Apollo Lunar Surface Journal mirror)",
+  "url": "https://www.apollojournals.org/alsj/a15/a15mr-1.htm",
+  "source_type": "NASA mission report",
+  "publication_date": "1971",
+  "accessed": "2026-11-15",
+  "supports": [
+   "Apollo 15 landing coordinates, EVA traverse distances, samples returned"
+  ],
+  "read_level": "excerpt",
+  "notes": ""
+ },
+ {
+  "source_id": "S10",
+  "title": "Remembering the First Moon-Based Telescope",
+  "organization": "NASA History",
+  "url": "https://www.nasa.gov/history/remembering-the-first-moon-based-telescope/",
+  "source_type": "NASA history article",
+  "publication_date": "2019-07-15",
+  "accessed": "2026-11-15",
+  "supports": [
+   "Apollo 16 FUV camera deployment, 178 film frames, instrument remains on the Moon"
+  ],
+  "read_level": "excerpt",
+  "notes": ""
+ },
+ {
+  "source_id": "S11",
+  "title": "Apollo 16 Far-Ultraviolet Camera/Spectrograph: Earth Observations",
+  "organization": "Carruthers & Page, Science 177(4051):788",
+  "url": "https://doi.org/10.1126/science.177.4051.788",
+  "source_type": "Peer-reviewed paper",
+  "publication_date": "1972-09-01",
+  "accessed": "2026-11-15",
+  "supports": [
+   "Geocorona, auroral and airglow results from the Apollo 16 UV experiment"
+  ],
+  "read_level": "excerpt",
+  "notes": ""
+ },
+ {
+  "source_id": "S12",
+  "title": "Coordinates and Maps of the Apollo 17 Landing Site",
+  "organization": "Haase et al., Earth and Space Science 6",
+  "url": "https://doi.org/10.1029/2018EA000408",
+  "source_type": "Peer-reviewed paper",
+  "publication_date": "2019",
+  "accessed": "2026-11-15",
+  "supports": [
+   "Apollo 17 traverse distances recomputed from imagery (31.204 km) vs odometer readings"
+  ],
+  "read_level": "excerpt",
+  "notes": ""
+ },
+ {
+  "source_id": "S13",
+  "title": "Mars Pathfinder Mission Description (PDS archive)",
+  "organization": "NASA PDS / JPL",
+  "url": "https://planetarydata.jpl.nasa.gov/img/data/mpf/rover/mprv_0001/document/mission.htm",
+  "source_type": "NASA mission archive",
+  "publication_date": "n.d.",
+  "accessed": "2026-11-15",
+  "supports": [
+   "Pathfinder landing site, rover deployment time, lander last data 27 Sep 1997, instruments"
+  ],
+  "read_level": "excerpt",
+  "notes": ""
+ },
+ {
+  "source_id": "S14",
+  "title": "Mars Pathfinder press kit / mission summary",
+  "organization": "NASA",
+  "url": "https://mars.nasa.gov/internal_resources/815/",
+  "source_type": "NASA mission document",
+  "publication_date": "1997",
+  "accessed": "2026-11-15",
+  "supports": [
+   "Landing coordinates 19.13 N 33.22 W, bounce sequence, sol 83 last transmission, rover survival"
+  ],
+  "read_level": "excerpt",
+  "notes": ""
+ },
+ {
+  "source_id": "S15",
+  "title": "Mars Pathfinder Landing Site (PIA01124)",
+  "organization": "NASA JPL Photojournal",
+  "url": "https://www.jpl.nasa.gov/images/pia01124-mars-pathfinder-landing-site/",
+  "source_type": "NASA image caption",
+  "publication_date": "1997-12-12",
+  "accessed": "2026-11-15",
+  "supports": [
+   "Coordinate-frame discrepancy for the Pathfinder site (19.17 N 33.21 W USGS frame)"
+  ],
+  "read_level": "excerpt",
+  "notes": ""
+ },
+ {
+  "source_id": "S16",
+  "title": "Spirit - Mission Overview",
+  "organization": "NASA Science",
+  "url": "https://science.nasa.gov/mission/mer-spirit/",
+  "source_type": "NASA mission page",
+  "publication_date": "n.d.",
+  "accessed": "2026-11-15",
+  "supports": [
+   "Spirit landing date, 7.73 km odometry, Troy embedding, last contact 22 Mar 2010, recovery end 25 May 2011"
+  ],
+  "read_level": "excerpt",
+  "notes": ""
+ },
+ {
+  "source_id": "S17",
+  "title": "Mars Exploration Rover Spirit End of Mission Report (JPL Publication 16-2)",
+  "organization": "NASA JPL",
+  "url": "https://ntrs.nasa.gov/api/citations/20160001767/downloads/20160001767.pdf",
+  "source_type": "NASA technical report",
+  "publication_date": "2015-12",
+  "accessed": "2026-11-15",
+  "supports": [
+   "Spirit embedding at Troy (sol 1886), loss of signal sol 2210, recovery effort details"
+  ],
+  "read_level": "excerpt",
+  "notes": ""
+ },
+ {
+  "source_id": "S18",
+  "title": "Opportunity - Mission Overview",
+  "organization": "NASA Science",
+  "url": "https://science.nasa.gov/mission/mer-opportunity/",
+  "source_type": "NASA mission page",
+  "publication_date": "n.d.",
+  "accessed": "2026-11-15",
+  "supports": [
+   "Opportunity dates, 45.16 km odometry, Perseverance Valley final location, distance record history"
+  ],
+  "read_level": "excerpt",
+  "notes": ""
+ },
+ {
+  "source_id": "S19",
+  "title": "NASA's Record-Setting Opportunity Rover Mission on Mars Comes to End",
+  "organization": "NASA",
+  "url": "https://www.nasa.gov/news-release/nasas-record-setting-opportunity-rover-mission-on-mars-comes-to-end/",
+  "source_type": "NASA news release",
+  "publication_date": "2019-02-13",
+  "accessed": "2026-11-15",
+  "supports": [
+   "Opportunity end of mission, final communication 10 Jun 2018, 90-sol/1,000 m design life"
+  ],
+  "read_level": "excerpt",
+  "notes": ""
+ },
+ {
+  "source_id": "S20",
+  "title": "InSight Lander - Mission Overview",
+  "organization": "NASA Science",
+  "url": "https://science.nasa.gov/mission/insight/",
+  "source_type": "NASA mission page",
+  "publication_date": "n.d.",
+  "accessed": "2026-11-15",
+  "supports": [
+   "InSight launch/landing dates, Elysium Planitia landing site coordinates, end of mission"
+  ],
+  "read_level": "excerpt",
+  "notes": ""
+ },
+ {
+  "source_id": "S21",
+  "title": "NASA Retires InSight Mars Lander Mission After Years of Science",
+  "organization": "NASA",
+  "url": "https://www.nasa.gov/missions/insight/nasa-retires-insight-mars-lander-mission-after-years-of-science/",
+  "source_type": "NASA news release",
+  "publication_date": "2022-12-21",
+  "accessed": "2026-11-15",
+  "supports": [
+   "1,319 marsquakes detected, last contact 15 Dec 2022, dead-bus end of mission"
+  ],
+  "read_level": "excerpt",
+  "notes": ""
+ },
+ {
+  "source_id": "S22",
+  "title": "SEIS / InSight seismic network metadata (XB network)",
+  "organization": "IPGP Data Center / IRIS",
+  "url": "https://datacenter.ipgp.fr/networks/detail/XB_2016/",
+  "source_type": "Science data centre",
+  "publication_date": "n.d.",
+  "accessed": "2026-11-15",
+  "supports": [
+   "Precise InSight station coordinates 4.502384 N, 135.623447 E (Mars 2000 frame)"
+  ],
+  "read_level": "excerpt",
+  "notes": ""
+ },
+ {
+  "source_id": "S23",
+  "title": "Viking 1 - Mission Overview",
+  "organization": "NASA Science",
+  "url": "https://science.nasa.gov/mission/viking-1/",
+  "source_type": "NASA mission page",
+  "publication_date": "n.d.",
+  "accessed": "2026-11-15",
+  "supports": [
+   "Viking 1 landing date/coordinates, lander operations to 11 Nov 1982, Mutch Memorial Station naming"
+  ],
+  "read_level": "excerpt",
+  "notes": ""
+ },
+ {
+  "source_id": "S24",
+  "title": "Viking 1 Lander on the surface of Mars - Revised location",
+  "organization": "Morris, E.C., Icarus 44 (NTRS 19810041868)",
+  "url": "https://ntrs.nasa.gov/citations/19810041868",
+  "source_type": "Peer-reviewed paper",
+  "publication_date": "1980-10",
+  "accessed": "2026-11-15",
+  "supports": [
+   "Revised Viking 1 lander coordinates 22.483 N, 47.968 W"
+  ],
+  "read_level": "excerpt",
+  "notes": ""
+ },
+ {
+  "source_id": "S25",
+  "title": "Apollo 14 Press Kit",
+  "organization": "NASA",
+  "url": "http://www.ibiblio.org/apollo/Documents/1APOLLO14.pdf",
+  "source_type": "NASA press kit",
+  "publication_date": "1971-01",
+  "accessed": "2026-11-15",
+  "supports": [
+   "ALSEP Array C experiment list and objectives (PSE, ASE, SIDE, CCIG, CPLEE)"
+  ],
+  "read_level": "excerpt",
+  "notes": ""
+ },
+ {
+  "source_id": "S26",
+  "title": "50 Years Ago: Apollo 14 Lands at Fra Mauro",
+  "organization": "NASA History",
+  "url": "https://www.nasa.gov/history/50-years-ago-apollo-14-lands-at-fra-mauro/",
+  "source_type": "NASA history article",
+  "publication_date": "2021-02-04",
+  "accessed": "2026-11-15",
+  "supports": [
+   "Apollo 14 ALSEP deployment distance from the LM, active seismic experiment operation"
+  ],
+  "read_level": "excerpt",
+  "notes": ""
+ },
+ {
+  "source_id": "S27",
+  "title": "NASA Image and Video Library",
+  "organization": "NASA",
+  "url": "https://images.nasa.gov/",
+  "source_type": "NASA media archive",
+  "publication_date": "n.d.",
+  "accessed": "2026-11-15",
+  "supports": [
+   "All artifact photography used in this application (per-image IDs and captions in media records)"
+  ],
+  "read_level": "excerpt",
+  "notes": "Each media record carries its own images.nasa.gov/details/<ID> link and the catalogue description string."
+ },
+ {
+  "source_id": "S28",
+  "title": "Surveyor to the Moon (1966 - 1968)",
+  "organization": "NASA NSSDC",
+  "url": "https://nssdc.gsfc.nasa.gov/planetary/lunar/surveyor.html",
+  "source_type": "NASA data archive",
+  "publication_date": "n.d.",
+  "accessed": "2026-11-15",
+  "supports": [
+   "Surveyor 3 landing coordinates in the older NSSDC frame (3.01 S, 336.66 E)"
+  ],
+  "read_level": "excerpt",
+  "notes": ""
+ }
+]

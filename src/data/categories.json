@@ -1,0 +1,27 @@
+[
+ {
+  "id": "descent-stage",
+  "label": "Descent stage",
+  "blurb": "The landing half of a crewed lunar module, left behind when the ascent stage departed."
+ },
+ {
+  "id": "experiment-package",
+  "label": "Surface experiment package",
+  "blurb": "Instrument stations deployed on the ground and left to run for months or years."
+ },
+ {
+  "id": "deployed-instrument",
+  "label": "Deployed instrument",
+  "blurb": "A single instrument set up by hand or by arm, then abandoned in place."
+ },
+ {
+  "id": "lander",
+  "label": "Lander",
+  "blurb": "Spacecraft that landed and stayed: the largest class of relic in the archive."
+ },
+ {
+  "id": "rover",
+  "label": "Rover",
+  "blurb": "Vehicles that drove across another world and stopped somewhere on it."
+ }
+]

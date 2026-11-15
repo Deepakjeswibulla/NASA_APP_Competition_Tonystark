@@ -1,0 +1,331 @@
+SPACE RELICS — MASTER PROJECT PLAN
+==================================
+The Machines That Stayed Behind
+NASA International Space Apps Challenge 2026
+Challenge: "Abandoned but not Forgotten: Storytelling about NASA's Discarded
+Equipment on the Moon and Mars."
+
+Document version : 1.0
+Last revised     : 2026-11-15
+Status           : Phases 0–5 complete, Phase 6 (presentation content) complete.
+                   See PROGRESS.txt for the authoritative state.
+
+--------------------------------------------------------------------------------
+1. OBJECTIVES
+--------------------------------------------------------------------------------
+1.1 Primary objective
+Build a scientifically responsible, presentation-ready interactive archive of the
+hardware that human and robotic missions have left on the Moon and Mars, in which
+each artifact is told as a story of purpose, service, science and aftermath —
+not displayed as a catalogue entry.
+
+1.2 Secondary objectives
+  - Demonstrate a defensible research method: primary sources, cross-checking,
+    explicit uncertainty, recorded contradictions.
+  - Show that "abandoned" is not a single condition: left behind, switched off,
+    partly retrieved, partly still operational, and location unknown are all
+    different states and the application distinguishes them.
+  - Deliver a product that runs locally, needs no backend, no accounts and no
+    paid API, and can be demonstrated on a laptop without a network connection.
+
+1.3 Non-goals (deliberately excluded)
+  - User accounts, authentication, social features.
+  - A backend, database or server-side rendering.
+  - A chatbot or any generative component at runtime.
+  - Live NASA API integration (see §11 for the reasoning and what would be
+    required to add it).
+  - Complete coverage of every human-made object on the Moon and Mars.
+
+--------------------------------------------------------------------------------
+2. FINAL FEATURE SCOPE
+--------------------------------------------------------------------------------
+2.1 Pages (all implemented)
+  /              Home / landing
+  /explorer      Relic Explorer: grid + search + 5 filters + sorting
+  /relic/:id     Artifact detail / story (13 records)
+  /map           Planetary map (Moon / Mars, verified coordinates only)
+  /timeline      Mission timeline (52 dated events, filterable)
+  /legacy        Science Legacy (8 themes, artifact-to-theme attribution)
+  /compare       Compare any two artifacts across 11 attributes
+  /about         About, methodology, limitations, image attribution, bibliography
+
+2.2 Functional requirements met
+  - Hash-based routing; every navigation item resolves; deep links work
+    (/explorer?planet=Mars, /map?focus=<id>, /legacy?theme=<id>,
+    /compare?a=<id>&b=<id>).
+  - Search across names, missions, planets, regions, categories, purposes,
+    themes and structured facts.
+  - Filters: planet, category, physical status, mission, science theme; sorting
+    by deployment date (both directions), name, planet.
+  - Interactive map markers with selection, side-panel summary and deep link to
+    the record; co-located records offset with leader lines.
+  - Timeline filtered by planet and event type, with decade jump links.
+  - Comparison driven by the same dataset; differing rows highlighted.
+  - Loading/empty/error states: empty filter results, missing record, unknown
+    route, image load failure fallback.
+  - Responsive layouts down to 390 px; keyboard-operable markers and controls;
+    prefers-reduced-motion respected.
+  - Verification badge on every card and record.
+
+2.3 Explicitly out of scope for this build
+  - Photographic planetary basemap (see §10, limitation L1).
+  - Offline full-text search index; the dataset is small enough for in-memory
+    filtering.
+
+--------------------------------------------------------------------------------
+3. ARCHITECTURE
+--------------------------------------------------------------------------------
+3.1 Stack
+  React 18 + Vite 5, plain CSS with design tokens (no CSS framework), lucide-react
+  for icons, local JSON for data. No router library (≈40-line hash router). No
+  state library. No backend.
+
+3.2 Directory layout
+  index.html
+  vite.config.js            single-file build configuration
+  package.json
+  src/
+    main.jsx                entry
+    App.jsx                 hash router + page switch
+    styles/global.css       design tokens, layout, components
+    utils/data.js           the ONLY data access layer
+    data/                   artifacts.json, sources.json, missions.json,
+                            planets.json, categories.json, statuses.json,
+                            themes.json, meta.json
+    components/             Layout, ArtifactCard, Filters, PlanetMap, ui
+    pages/                  Home, Explorer, ArtifactDetail, MapPage,
+                            TimelinePage, LegacyPage, ComparePage, AboutPage
+    assets/images/          14 NASA images (bundled)
+  scripts/
+    build-data.py           authoring source -> src/data/*.json
+    validate-data.mjs       structural + cross-reference validator
+    build-docs.py           dataset -> RESEARCH_SOURCES.txt, DATA_AUDIT.txt
+  research/
+    DATA_VALIDATION_REPORT.txt
+  PROJECT_PLAN.txt  PROGRESS.txt  HANDOFF.txt  RESEARCH_SOURCES.txt
+  DATA_AUDIT.txt    CHANGELOG.txt  README.md     PRESENTATION.md
+
+3.3 Data flow (single source of truth)
+  sources (read) -> artifact records (build-data.py) -> src/data/*.json
+  -> validation (validate-data.mjs, must exit 0)
+  -> src/utils/data.js (enrichment: media URLs, labels, themes, search index)
+  -> components/pages. No page hard-codes an artifact fact.
+
+3.4 Build output
+  `npm run build` produces ONE self-contained HTML file (dist/index.html,
+  ≈3.5 MB) with JS, CSS and all imagery inlined as data URIs. It opens from the
+  filesystem with no server and works offline. `npm run dev` serves the normal
+  Vite dev environment.
+
+--------------------------------------------------------------------------------
+4. DATA SCHEMA
+--------------------------------------------------------------------------------
+Artifact record (src/data/artifacts.json), one object per artifact:
+  id                  kebab-case unique identifier
+  name                full official name
+  short_name          label used in dense UI (map, cards)
+  planet              "Moon" | "Mars"
+  mission, mission_id mission display name and key into missions.json
+  category            key into categories.json
+  physical_status     key into statuses.json
+  deployment_date     ISO date or null (never guessed)
+  mission_period      { start, end } ISO dates or null
+  operational_lifetime human-readable string, may carry a caveat
+  original_purpose    what it was built to do
+  mission_story       how it reached the surface
+  operational_history its role during the mission
+  scientific_contribution[]  { theme_id, title, text }
+  final_status        what happened after the mission
+  why_it_matters      relevance today
+  themes[]            keys into themes.json
+  facts[]             { label, value } structured summary
+  timeline[]          { date, label, detail, type } type ∈ mission|deployment|
+                      science|end|legacy
+  location            { region, site, latitude, longitude, accuracy, verified,
+                        map_note }
+                      accuracy ∈ exact | site_level | approximate | unknown
+  media[]             { file, nasa_id, title, caption, credit, media_type,
+                        date, source_url }
+                      media_type ∈ photograph | orbital photograph |
+                        illustration | diagram
+  sources[]           { source_id, supports[] }
+  verification        { status, last_checked, notes[] }
+                      status ∈ verified | partially verified | unverified
+
+Supporting files: sources.json (28 entries with read_level and supported
+claims), missions.json (11), planets.json (2), categories.json (5),
+statuses.json (3), themes.json (8), meta.json.
+
+--------------------------------------------------------------------------------
+5. RESEARCH METHOD
+--------------------------------------------------------------------------------
+5.1 Candidate selection
+Started from the 12 candidates named in the brief. All 12 were retained because
+each is documented well enough to publish; a thirteenth (Viking 1 Lander) was
+added because it is the clearest case of hardware that stayed operational for
+years after its mission ended, which the archive needed in order to make the
+"abandoned ≠ inactive" distinction honestly.
+
+5.2 Workflow per artifact
+  1. Identify the artifact and confirm hardware was genuinely left behind.
+  2. Search NASA mission pages, NSSDC catalogues, NASA technical reports
+     (NTRS, PDS), the LROC anthropogenic-features survey, peer-reviewed papers.
+  3. Read the retrieved passage; record the URL, the claims it supports and
+     whether the whole document or an excerpt was read.
+  4. Cross-check dates, coordinates and distances against a second source.
+  5. Record disagreements between sources instead of silently choosing.
+  6. Assign a verification status; write the record; run the validator.
+
+5.3 Location policy
+  - Coordinates are only recorded where a source publishes them.
+  - "exact" is used only for surveyed positions (LROC survey ±3–15 m, or a
+    mission-published landing coordinate cross-checked).
+  - Where an artifact's own position is not published (Sojourner, Spirit,
+    Opportunity, Apollo 16 FUV camera), the marker shows the landing site and
+    accuracy is "site_level" or "approximate", stated in the record and in the
+    interface.
+  - Longitudes are stored as published (e.g. 354.47) and normalised to −180…180
+    at render time; the record keeps the published value.
+
+5.4 Image policy
+  - Every image is downloaded from the NASA Image and Video Library by NASA id,
+    stored locally, and displayed with its catalogue title, its own caption, the
+    credit line and a link to images.nasa.gov/details/<ID>.
+  - Artist's concepts are labelled "illustration — not a photograph" in the UI.
+  - No image is used to illustrate an artifact it does not depict.
+
+5.5 Validation
+`npm run validate` checks unique ids, required fields, foreign keys (sources,
+missions, categories, statuses, themes), coordinate ranges and accuracy values,
+media file existence and metadata, date formats, timeline ordering, and
+verification consistency. It writes research/DATA_VALIDATION_REPORT.txt and
+exits non-zero on error. Current result: PASS, 0 errors, 0 warnings.
+
+--------------------------------------------------------------------------------
+6. UI/UX SPECIFICATION
+--------------------------------------------------------------------------------
+6.1 Design language
+Premium scientific archive: near-black navy surfaces (#070a12 / #0e1320),
+restrained cyan (#6fd6ff) and amber (#f2b25c) accents, generous spacing, large
+type with tight tracking, thin 1px hairlines instead of boxes, quiet motion
+(fade-up on mount, 4 px card lift on hover). No neon, no gradients beyond
+atmospheric radial washes, no decorative elements that compete with content.
+
+6.2 Typography
+System UI stack for text; monospace for labels, dates, coordinates and section
+numerals. Display sizes: hero clamp(2.6–5.1 rem), section heads
+clamp(1.7–2.5 rem), body 16 px / 1.62.
+
+6.3 Key components
+  - ArtifactCard: image with media-type tag, planet chip, mission + category,
+    name, purpose excerpt, region + date, verification badge, CTA.
+  - VerificationBadge: verified / partially verified / unverified.
+  - Filters: search box + segmented controls + selects + result count + reset.
+  - PlanetMap: schematic SVG plot, viewport fitted to the records in view, real
+    graticule, distinct rendering for surveyed vs approximate positions,
+    co-location offsets with leader lines, explicit "not a basemap" legend.
+  - Story blocks: numbered sections (01–08) on the detail page.
+  - SpecList, SourceList, MediaFigure (with fallback), EmptyState.
+
+6.4 Accessibility
+Semantic landmarks, aria-current on navigation, aria-pressed on filters,
+keyboard-activatable map markers, alt text from captions, focus-visible rings,
+reduced-motion support, contrast-checked palette.
+
+--------------------------------------------------------------------------------
+7. DEVELOPMENT PHASES (as executed)
+--------------------------------------------------------------------------------
+PHASE 0  Environment inspection, project init, plan.                     DONE
+PHASE 1  Research and verification of 12 candidates + 1 addition.        DONE
+PHASE 2  Schema finalisation, dataset build, validation.                 DONE
+PHASE 3  Design tokens, layout, home, explorer, cards, detail pages.     DONE
+PHASE 4  Map, timeline, legacy, compare, search/filter integration.      DONE
+PHASE 5  QA: routing, filters, deep links, 404s, responsive, build.      DONE
+PHASE 6  Presentation content, pitch, demo script, judge Q&A.            DONE
+
+--------------------------------------------------------------------------------
+8. TESTING REQUIREMENTS AND RESULTS
+--------------------------------------------------------------------------------
+8.1 Automated
+  - `npm run validate`: PASS (0 errors, 0 warnings).
+  - `npm run build`: succeeds; single-file output verified to contain inlined
+    imagery (22 base64 image references) and to mount React in headless
+    Chromium.
+8.2 Headless browser checks (Chromium, file:// URL, production build)
+  - All 8 routes render without a blank screen or console-fatal error.
+  - /explorer renders 13 cards; /explorer?planet=Mars renders 6.
+  - /legacy?theme=seismology renders 5 contributing artifacts.
+  - /map?focus=insight-lander selects the Mars record and switches planet.
+  - /compare?a=apollo-11-easep&b=insight-lander renders both records.
+  - /relic/does-not-exist and /nope render explicit not-found states.
+  - /timeline renders 52 events.
+8.3 Visual checks
+  Screenshots reviewed for all 8 pages plus a 400 px-wide mobile viewport.
+8.4 Not covered
+  No automated unit tests for the React components; no cross-browser matrix
+  beyond Chromium; no screen-reader pass beyond semantic markup review.
+
+--------------------------------------------------------------------------------
+9. ACCEPTANCE CRITERIA — STATUS
+--------------------------------------------------------------------------------
+[x] Project runs locally (npm run dev / open dist/index.html)
+[x] Homepage polished and responsive
+[x] At least 8 artifact records verified and integrated (13 integrated)
+[x] 12-artifact research target attempted and documented (12 + 1)
+[x] Every published artifact has supporting sources
+[x] Images correctly associated with their artifacts
+[x] Unknown values handled honestly (null + explicit notes)
+[x] Artifact explorer works
+[x] Search and filtering work
+[x] Artifact detail pages work
+[x] Timeline entries use verified dates
+[x] Map markers use published coordinates only
+[x] Comparison uses the real dataset
+[x] All source links resolve to the cited organisation
+[x] No critical navigation or runtime errors
+[x] Full demo walkthrough tested
+[x] PROGRESS.txt and HANDOFF.txt reflect the actual state
+[x] Presentation content reflects what has genuinely been implemented
+
+--------------------------------------------------------------------------------
+10. KNOWN CONSTRAINTS, LIMITATIONS AND RISKS
+--------------------------------------------------------------------------------
+L1  No photographic planetary basemap. No offline lunar/Martian basemap is
+    available in this environment (USGS Astrogeology tiles are outside the
+    permitted network range), so the map is a schematic equirectangular plot.
+    Coordinates and the graticule are real; the surface shading is not, and the
+    interface says so twice.
+L2  Four records carry site-level markers, not artifact positions (Sojourner,
+    Spirit, Opportunity, Apollo 16 FUV camera) because no published coordinate
+    exists for the artifact itself.
+L3  Coordinate sets disagree for Mars Pathfinder (three published values) and
+    Viking 1 (two). The discrepancy is printed in the record.
+L4  Apollo 17 LRV distance: odometer 35.7 km vs 31.2 km photogrammetric
+    reconstruction. Both recorded.
+L5  Source reading depth is mostly "excerpt": the relevant passage of each
+    document was retrieved and read, not the whole PDF. This is stated per
+    source rather than hidden.
+L6  The dataset is curated and finite (13 records). It is not a census of the
+    ~100+ objects at Tranquility Base alone.
+L7  Time-sensitive facts (e.g. Perseverance passing Opportunity's distance
+    record in October 2026) are correct as of the access date and will age.
+L8  Risk: judges may expect live NASA data. The About page states plainly that
+    the dataset is curated and that no live API is used.
+
+--------------------------------------------------------------------------------
+11. IF LIVE NASA DATA IS ADDED LATER
+--------------------------------------------------------------------------------
+Any integration must document: the exact endpoint, the fields it supplies, the
+rate limits, the failure behaviour, and which records are affected. A sensible
+first step is images-api.nasa.gov for additional imagery (no key required) with
+a bundled fallback for every image, so the demo never depends on the network.
+The curated dataset must remain the source of truth for facts; live data may only
+add media or clearly-labelled supplementary context.
+
+--------------------------------------------------------------------------------
+12. PRESENTATION REQUIREMENTS
+--------------------------------------------------------------------------------
+Ten-slide structure, a 2–3 minute demo script, a research-methodology
+explanation, likely judge questions with defensible answers, and an honest
+limitations list. Content lives in PRESENTATION.md; every claim in it must match
+the implemented application.

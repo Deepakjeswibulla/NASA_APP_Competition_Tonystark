@@ -1,0 +1,15 @@
+SPACE RELICS — DATA VALIDATION REPORT
+Generated: 2026-11-15T11:54:15.193Z
+
+RESULT: PASS — 0 error(s), 0 warning(s)
+
+SUMMARY
+  - 13 artifact records, 28 sources, 11 missions, 8 themes.
+  - Coordinates present for 13/13 records.
+  - Verification: 11 verified, 2 partially verified, 0 unverified.
+
+ERRORS
+  none
+
+WARNINGS
+  none

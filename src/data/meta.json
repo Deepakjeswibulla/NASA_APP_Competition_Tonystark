@@ -1,0 +1,6 @@
+{
+ "dataset_version": "1.0",
+ "generated": "2026-11-15",
+ "curated_by": "SPACE RELICS research team",
+ "note": "Curated local dataset. No live NASA API is used at runtime; every record carries its own sources."
+}

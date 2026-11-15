@@ -1,0 +1,325 @@
+SPACE RELICS — DATA AUDIT
+=========================
+
+Generated: 2026-11-15
+Artifact records: 13   |   Verified: 11   |   Partially verified: 2   |   Unverified: 0
+
+STATUS DEFINITIONS
+  VERIFIED          — important factual claims are supported by reliable sources and
+                      coordinates/dates have been cross-checked.
+  PARTIALLY VERIFIED— some important information is missing or uncertain; the record
+                      states what and why.
+  UNVERIFIED        — insufficient evidence to publish the information as fact.
+
+STRUCTURAL VALIDATION: see research/DATA_VALIDATION_REPORT.txt (npm run validate).
+
+==============================================================================
+
+------------------------------------------------------------------------------
+ARTIFACT ID        : apollo-11-lm-descent-stage
+NAME               : Apollo 11 Lunar Module “Eagle” Descent Stage
+MISSION            : Apollo 11  (apollo-11)
+PLANET             : Moon
+CATEGORY           : descent-stage
+PHYSICAL STATUS    : left_on_surface
+DEPLOYED           : 1969-07-20
+MISSION PERIOD     : 1969-07-20 -> 1969-07-21
+OPERATIONAL LIFE   : About 21 hours 36 minutes as a crewed base on the surface (20–21 July 1969)
+SCIENTIFIC ROLE    : 2 contribution(s) recorded
+LOCATION VERIFIED  : True  (accuracy: exact)
+  region / site    : Mare Tranquillitatis (Sea of Tranquility) / Tranquility Base
+  coordinates      : 0.6741, 23.473
+  provenance note  : Landing coordinates from the NASA NSSDC Apollo landings table (DE421 mean Earth frame). LROC has since re-surveyed the hardware to about ±15 m.
+IMAGE VERIFIED     : 1 media record(s), each with NASA id + catalogue caption
+  - as11-40-5927 (photograph): View of the Apollo 11 Lunar Module as it rested on the lunar surface
+SOURCE COMPLETENESS: 4 source reference(s) -> S01, S02, S03, S27
+UNRESOLVED QUESTIONS:
+  - Coordinates cross-checked between the NSSDC landings table and the LROC anthropogenic-features survey.
+  - The descent stage is not an 'abandoned' object in the everyday sense: it was deliberately left as part of the mission design.
+OVERALL VERIFICATION: VERIFIED
+LAST CHECKED        : 2026-11-15
+
+------------------------------------------------------------------------------
+ARTIFACT ID        : apollo-11-easep
+NAME               : Apollo 11 Early Apollo Scientific Experiments Package (EASEP)
+MISSION            : Apollo 11  (apollo-11)
+PLANET             : Moon
+CATEGORY           : experiment-package
+PHYSICAL STATUS    : still_partly_operational
+DEPLOYED           : 1969-07-21
+MISSION PERIOD     : 1969-07-21 -> 1969-08-27
+OPERATIONAL LIFE   : Seismometer: 21 days (21 July – 27 August 1969). Retroreflector: still in use.
+SCIENTIFIC ROLE    : 2 contribution(s) recorded
+LOCATION VERIFIED  : True  (accuracy: exact)
+  region / site    : Mare Tranquillitatis / Tranquility Base, 16.8 m from the LM
+  coordinates      : 0.6741, 23.473
+  provenance note  : Marker placed at the Tranquility Base landing coordinates; the package itself sits 16.8 m from the descent stage, well inside the marker's precision at this map scale.
+IMAGE VERIFIED     : 1 media record(s), each with NASA id + catalogue caption
+  - as11-40-5942 (photograph): Astronaut Edwin Aldrin prepares to deploy EASEP on the surface of the Moon
+SOURCE COMPLETENESS: 4 source reference(s) -> S03, S04, S01, S27
+UNRESOLVED QUESTIONS:
+  - The 48 kg figure is the seismometer system mass as stated in the Apollo 11 Preliminary Science Report.
+  - The retroreflector is not a 'relic' in the inactive sense — it is flagged as still partly operational rather than abandoned.
+OVERALL VERIFICATION: VERIFIED
+LAST CHECKED        : 2026-11-15
+
+------------------------------------------------------------------------------
+ARTIFACT ID        : surveyor-3
+NAME               : Surveyor 3
+MISSION            : Surveyor 3 / Apollo 12  (surveyor-3)
+PLANET             : Moon
+CATEGORY           : lander
+PHYSICAL STATUS    : partially_retrieved
+DEPLOYED           : 1967-04-20
+MISSION PERIOD     : 1967-04-20 -> 1967-05-04
+OPERATIONAL LIFE   : 14 days of surface operations (20 April – 4 May 1967); 31 months on the Moon before the Apollo 12 visit
+SCIENTIFIC ROLE    : 2 contribution(s) recorded
+LOCATION VERIFIED  : True  (accuracy: exact)
+  region / site    : Oceanus Procellarum (Mare Cognitum), southeastern region / Surveyor crater
+  coordinates      : -3.0162, -23.4179
+  provenance note  : Position from the LROC anthropogenic-features survey (±2.6 m in the published catalogue). Older NASA documents give 3.01°S, 336.66°E in a different longitude convention — the same place.
+IMAGE VERIFIED     : 1 media record(s), each with NASA id + catalogue caption
+  - as12-48-7121 (photograph): View of Surveyor III in its crater
+SOURCE COMPLETENESS: 6 source reference(s) -> S05, S06, S07, S02, S28, S27
+UNRESOLVED QUESTIONS:
+  - Sources give the Apollo 12 LM's distance from Surveyor 3 as 155 m (NASA Science feature) and 180 m (Surveyor 3 mission page); both are recorded, the closer figure is used in the narrative with the range shown.
+  - Mass of returned material is quoted as 'about 10 kg' by the Smithsonian summary of the mission; the 1972 NASA report lists the individual items instead of a total.
+OVERALL VERIFICATION: VERIFIED
+LAST CHECKED        : 2026-11-15
+
+------------------------------------------------------------------------------
+ARTIFACT ID        : apollo-14-alsep
+NAME               : Apollo 14 ALSEP (Array C)
+MISSION            : Apollo 14  (apollo-14)
+PLANET             : Moon
+CATEGORY           : experiment-package
+PHYSICAL STATUS    : left_on_surface
+DEPLOYED           : 1971-02-05
+MISSION PERIOD     : 1971-02-05 -> 1977-09-30
+OPERATIONAL LIFE   : Six and a half years (5 February 1971 – 30 September 1977)
+SCIENTIFIC ROLE    : 3 contribution(s) recorded
+LOCATION VERIFIED  : True  (accuracy: exact)
+  region / site    : Fra Mauro highlands / ALSEP central station, about 180 m west of the Antares lunar module
+  coordinates      : -3.644, -17.4775
+  provenance note  : Central-station coordinates from the Apollo seismic station catalogue and the ALSEP Termination Report.
+IMAGE VERIFIED     : 1 media record(s), each with NASA id + catalogue caption
+  - as14-67-09379 (photograph): View of the Central Station of the ALSEP deployed by Apollo 14 astronauts
+SOURCE COMPLETENESS: 4 source reference(s) -> S25, S26, S04, S27
+UNRESOLVED QUESTIONS:
+  - The deployment distance is given as about 600 ft (180 m) by NASA History; the seismic-station catalogue lists the seismometer 178 m from the lunar module. Both agree within a few metres.
+OVERALL VERIFICATION: VERIFIED
+LAST CHECKED        : 2026-11-15
+
+------------------------------------------------------------------------------
+ARTIFACT ID        : apollo-15-lrv
+NAME               : Apollo 15 Lunar Roving Vehicle
+MISSION            : Apollo 15  (apollo-15)
+PLANET             : Moon
+CATEGORY           : rover
+PHYSICAL STATUS    : left_on_surface
+DEPLOYED           : 1971-07-31
+MISSION PERIOD     : 1971-07-30 -> 1971-08-02
+OPERATIONAL LIFE   : Three days of driving; three EVAs totalling 18 h 13 min on the surface
+SCIENTIFIC ROLE    : 3 contribution(s) recorded
+LOCATION VERIFIED  : True  (accuracy: exact)
+  region / site    : Hadley-Apennine, Mare Imbrium margin / Final parking position, about 160 m east of the Falcon descent stage
+  coordinates      : 26.1317, 3.638
+  provenance note  : Final parked position measured from LROC imagery; the landing site itself is 26.132°N, 3.634°E.
+IMAGE VERIFIED     : 1 media record(s), each with NASA id + catalogue caption
+  - as15-88-11901 (photograph): Lunar Roving Vehicle photographed against the lunar background during EVA
+SOURCE COMPLETENESS: 4 source reference(s) -> S08, S09, S02, S27
+UNRESOLVED QUESTIONS:
+  - Some popular sources quote 27.9 km, others 28.1 km for the same traverse; the mission report and LROC both give 27.9 km, which is used here.
+OVERALL VERIFICATION: VERIFIED
+LAST CHECKED        : 2026-11-15
+
+------------------------------------------------------------------------------
+ARTIFACT ID        : apollo-16-fuv-camera
+NAME               : Apollo 16 Far Ultraviolet Camera/Spectrograph
+MISSION            : Apollo 16  (apollo-16)
+PLANET             : Moon
+CATEGORY           : deployed-instrument
+PHYSICAL STATUS    : left_on_surface
+DEPLOYED           : 1972-04-21
+MISSION PERIOD     : 1972-04-21 -> 1972-04-23
+OPERATIONAL LIFE   : Operated during the three-day surface stay (21–23 April 1972)
+SCIENTIFIC ROLE    : 3 contribution(s) recorded
+LOCATION VERIFIED  : True  (accuracy: site_level)
+  region / site    : Descartes highlands / Apollo 16 landing site; instrument left in the shadow of the Orion descent stage
+  coordinates      : -8.973, 15.5002
+  provenance note  : The Apollo 16 landing site is surveyed to metres, but the tripod's own position was not individually surveyed. The marker therefore shows the landing site, not the instrument.
+IMAGE VERIFIED     : 1 media record(s), each with NASA id + catalogue caption
+  - as16-114-18439 (photograph): Astronaut John Young in the shadow of the Lunar Module behind the ultraviolet camera
+SOURCE COMPLETENESS: 4 source reference(s) -> S10, S11, S01, S27
+UNRESOLVED QUESTIONS:
+  - Mass is quoted as 22 kg in the instrument literature and as '50 pounds' in one NASA feature; these agree, and 22 kg is used.
+  - The instrument's individual position on the surface is not published as coordinates, so the map marker is site-level and is labelled as such.
+OVERALL VERIFICATION: VERIFIED
+LAST CHECKED        : 2026-11-15
+
+------------------------------------------------------------------------------
+ARTIFACT ID        : apollo-17-lrv
+NAME               : Apollo 17 Lunar Roving Vehicle
+MISSION            : Apollo 17  (apollo-17)
+PLANET             : Moon
+CATEGORY           : rover
+PHYSICAL STATUS    : left_on_surface
+DEPLOYED           : 1972-12-11
+MISSION PERIOD     : 1972-12-11 -> 1972-12-14
+OPERATIONAL LIFE   : Three EVAs over three days (11–14 December 1972)
+SCIENTIFIC ROLE    : 3 contribution(s) recorded
+LOCATION VERIFIED  : True  (accuracy: exact)
+  region / site    : Taurus-Littrow valley / Parked position near the Apollo 17 lunar module
+  coordinates      : 20.1896, 30.7769
+  provenance note  : Position from the LROC anthropogenic-features survey (±3.2 m).
+IMAGE VERIFIED     : 1 media record(s), each with NASA id + catalogue caption
+  - as17-137-20979 (photograph): Close-up of the lunar roving vehicle at the Apollo 17 Taurus-Littrow landing site
+SOURCE COMPLETENESS: 4 source reference(s) -> S02, S12, S01, S27
+UNRESOLVED QUESTIONS:
+  - The 35.7 km figure comes from the rover odometer. A 2019 photogrammetric reconstruction of the traverses gives 31.2 km of actual ground path, about 2 km longer than the mapped profile in the same study — the odometer over-reads. Both values are recorded here rather than one being silently chosen.
+OVERALL VERIFICATION: VERIFIED
+LAST CHECKED        : 2026-11-15
+
+------------------------------------------------------------------------------
+ARTIFACT ID        : mars-pathfinder-lander
+NAME               : Mars Pathfinder Lander (Carl Sagan Memorial Station)
+MISSION            : Mars Pathfinder  (mars-pathfinder)
+PLANET             : Mars
+CATEGORY           : lander
+PHYSICAL STATUS    : left_on_surface
+DEPLOYED           : 1997-07-04
+MISSION PERIOD     : 1997-07-04 -> 1997-09-27
+OPERATIONAL LIFE   : 83 sols (4 July – 27 September 1997), against a 30-sol design life
+SCIENTIFIC ROLE    : 3 contribution(s) recorded
+LOCATION VERIFIED  : True  (accuracy: approximate)
+  region / site    : Ares Vallis, Chryse Planitia / Carl Sagan Memorial Station
+  coordinates      : 19.13, -33.22
+  provenance note  : Three coordinate sets are in circulation for this site: 19.13°N 33.22°W (NASA mission summary), 19.33°N 33.55°W (NSSDC) and 19.17°N 33.21°W (JPL Photojournal, USGS frame). The differences are of order 10–20 km. The marker uses the NASA mission-summary values.
+IMAGE VERIFIED     : 1 media record(s), each with NASA id + catalogue caption
+  - PIA01121 (photograph): Sojourner Rover View of Pathfinder Lander
+SOURCE COMPLETENESS: 4 source reference(s) -> S13, S14, S15, S27
+UNRESOLVED QUESTIONS:
+  - The landing coordinates are recorded with an explicit discrepancy between NASA, NSSDC and JPL/Photojournal values; the marker is therefore marked approximate.
+  - The cause of the loss of contact is stated by NASA as suspected (battery depletion and cold), not confirmed.
+OVERALL VERIFICATION: PARTIALLY VERIFIED
+LAST CHECKED        : 2026-11-15
+
+------------------------------------------------------------------------------
+ARTIFACT ID        : sojourner-rover
+NAME               : Sojourner Rover
+MISSION            : Mars Pathfinder  (mars-pathfinder)
+PLANET             : Mars
+CATEGORY           : rover
+PHYSICAL STATUS    : left_on_surface
+DEPLOYED           : 1997-07-06
+MISSION PERIOD     : 1997-07-06 -> 1997-09-27
+OPERATIONAL LIFE   : 83 sols — about twelve times its seven-sol design life
+SCIENTIFIC ROLE    : 2 contribution(s) recorded
+LOCATION VERIFIED  : True  (accuracy: site_level)
+  region / site    : Ares Vallis, Chryse Planitia / Near the Carl Sagan Memorial Station (exact final position unknown)
+  coordinates      : 19.13, -33.22
+  provenance note  : The marker is the Pathfinder landing site, whose coordinates are published. The rover worked within a few tens of metres of the lander, and no published coordinate exists for its final resting place, so the marker is site-level and the record states that the final position is unknown.
+IMAGE VERIFIED     : 1 media record(s), each with NASA id + catalogue caption
+  - PIA00649 (photograph): Sojourner near Barnacle
+SOURCE COMPLETENESS: 3 source reference(s) -> S13, S14, S27
+UNRESOLVED QUESTIONS:
+  - Total odometry is usually quoted as 'about 100 m'; a precise published odometer total was not found in the sources reviewed.
+  - The rover's final position is genuinely unknown, which is why its record is flagged as unverified for location.
+OVERALL VERIFICATION: PARTIALLY VERIFIED
+LAST CHECKED        : 2026-11-15
+
+------------------------------------------------------------------------------
+ARTIFACT ID        : spirit-rover
+NAME               : Spirit Rover (MER-A)
+MISSION            : Mars Exploration Rover — Spirit  (mer-spirit)
+PLANET             : Mars
+CATEGORY           : rover
+PHYSICAL STATUS    : left_on_surface
+DEPLOYED           : 2004-01-04
+MISSION PERIOD     : 2004-01-04 -> 2010-03-22
+OPERATIONAL LIFE   : 2,210 sols (6 years 2 months), against a 90-sol design life
+SCIENTIFIC ROLE    : 3 contribution(s) recorded
+LOCATION VERIFIED  : True  (accuracy: site_level)
+  region / site    : Gusev crater / Landing site; the rover's final position is at Troy, west of Home Plate
+  coordinates      : -14.5718, 175.4785
+  provenance note  : Marker shows the Gusev landing site, which is surveyed. The rover's final position at Troy is several kilometres away and is not published as a coordinate in the sources reviewed.
+IMAGE VERIFIED     : 1 media record(s), each with NASA id + catalogue caption
+  - PIA05248 (orbital photograph): MGS MOC Image of Mars Exploration Rover Spirit on Mars
+SOURCE COMPLETENESS: 3 source reference(s) -> S16, S17, S27
+UNRESOLVED QUESTIONS:
+  - NASA Science gives the end of recovery efforts as 25 May 2011; the JPL end-of-mission report describes recovery activity concluding on 13 July 2011. Both are recorded.
+  - The map marker is the landing site, not the final position, and the interface says so.
+OVERALL VERIFICATION: VERIFIED
+LAST CHECKED        : 2026-11-15
+
+------------------------------------------------------------------------------
+ARTIFACT ID        : opportunity-rover
+NAME               : Opportunity Rover (MER-B)
+MISSION            : Mars Exploration Rover — Opportunity  (mer-opportunity)
+PLANET             : Mars
+CATEGORY           : rover
+PHYSICAL STATUS    : left_on_surface
+DEPLOYED           : 2004-01-25
+MISSION PERIOD     : 2004-01-25 -> 2018-06-10
+OPERATIONAL LIFE   : 5,111 sols (14 years 5 months), against a 90-sol design life
+SCIENTIFIC ROLE    : 3 contribution(s) recorded
+LOCATION VERIFIED  : True  (accuracy: site_level)
+  region / site    : Meridiani Planum / Eagle crater landing site; final position in Perseverance Valley, Endeavour crater rim
+  coordinates      : -1.9462, 354.4734
+  provenance note  : Marker shows the Eagle crater landing site, whose coordinates are published. The final resting place in Perseverance Valley is roughly 21 km south-southwest and is not given as a coordinate in the sources reviewed.
+IMAGE VERIFIED     : 1 media record(s), each with NASA id + catalogue caption
+  - PIA23246 (orbital photograph): Opportunity's Tracks in Perseverance Valley
+SOURCE COMPLETENESS: 3 source reference(s) -> S18, S19, S27
+UNRESOLVED QUESTIONS:
+  - Landing coordinates 1.9462°S, 354.4734°E are the standard published values for Eagle crater; the longitude is often written as 4.5266°W.
+  - The distance record is time-sensitive: NASA Science states that Perseverance surpassed Opportunity's 45.16 km on 11 October 2026.
+OVERALL VERIFICATION: VERIFIED
+LAST CHECKED        : 2026-11-15
+
+------------------------------------------------------------------------------
+ARTIFACT ID        : insight-lander
+NAME               : InSight Lander
+MISSION            : InSight  (insight)
+PLANET             : Mars
+CATEGORY           : lander
+PHYSICAL STATUS    : left_on_surface
+DEPLOYED           : 2018-11-26
+MISSION PERIOD     : 2018-11-26 -> 2022-12-21
+OPERATIONAL LIFE   : Four years and one month (26 November 2018 – 15 December 2022 last contact)
+SCIENTIFIC ROLE    : 3 contribution(s) recorded
+LOCATION VERIFIED  : True  (accuracy: exact)
+  region / site    : Elysium Planitia (western) / InSight landing site
+  coordinates      : 4.5024, 135.6234
+  provenance note  : Position from the SEIS/InSight seismic network station metadata (Mars 2000 frame), confirmed by orbital imaging of the lander.
+IMAGE VERIFIED     : 1 media record(s), each with NASA id + catalogue caption
+  - PIA22228 (illustration): InSight on the Surface of Mars (artist's concept)
+SOURCE COMPLETENESS: 4 source reference(s) -> S20, S21, S22, S27
+UNRESOLVED QUESTIONS:
+  - The only image used for InSight is an artist's concept and is labelled as such in the interface.
+  - The heat-probe failure depth is reported as about 40 cm in the mission literature; the instrument's exact final depth is not quoted here.
+OVERALL VERIFICATION: VERIFIED
+LAST CHECKED        : 2026-11-15
+
+------------------------------------------------------------------------------
+ARTIFACT ID        : viking-1-lander
+NAME               : Viking 1 Lander (Thomas A. Mutch Memorial Station)
+MISSION            : Viking 1  (viking-1)
+PLANET             : Mars
+CATEGORY           : lander
+PHYSICAL STATUS    : left_on_surface
+DEPLOYED           : 1976-07-20
+MISSION PERIOD     : 1976-07-20 -> 1982-11-11
+OPERATIONAL LIFE   : Six years four months (2,245 sols), against a 90-sol primary mission
+SCIENTIFIC ROLE    : 3 contribution(s) recorded
+LOCATION VERIFIED  : True  (accuracy: approximate)
+  region / site    : Chryse Planitia (western slopes) / Thomas A. Mutch Memorial Station
+  coordinates      : 22.483, -47.94
+  provenance note  : NASA's Viking 1 mission page gives 22.483°N 47.94°W; a 1980 JPL revision based on orbiter images gives 22.483°N 47.968°W. The difference is about 2 km, so the marker is marked approximate.
+IMAGE VERIFIED     : 1 media record(s), each with NASA id + catalogue caption
+  - PIA00381 (photograph): First Photograph Taken on Mars Surface
+SOURCE COMPLETENESS: 3 source reference(s) -> S23, S24, S27
+UNRESOLVED QUESTIONS:
+  - Two coordinate sets are published for this site (see map note); the discrepancy is recorded rather than resolved silently.
+  - The biology results are summarised as the scientific consensus, not as a confirmed detection of life.
+OVERALL VERIFICATION: VERIFIED
+LAST CHECKED        : 2026-11-15

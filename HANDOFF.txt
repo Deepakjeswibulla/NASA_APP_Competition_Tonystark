@@ -1,0 +1,104 @@
+SPACE RELICS — HANDOFF
+======================
+For the next Claude instance. Read this before touching anything.
+Last updated: 2026-11-15.
+
+--------------------------------------------------------------------------------
+1. WHAT THE PROJECT IS
+--------------------------------------------------------------------------------
+SPACE RELICS — The Machines That Stayed Behind: an interactive, source-backed
+archive of the hardware left on the Moon and Mars, built for the NASA
+International Space Apps Challenge 2026. Thirteen artifact records, each told as
+a story (purpose → journey → service → science → aftermath → present state) with
+its sources and verification status attached. Eight screens, no backend, no
+accounts, no live API.
+
+--------------------------------------------------------------------------------
+2. WHAT IS ALREADY IMPLEMENTED
+--------------------------------------------------------------------------------
+- Full research dataset: 13 artifacts, 11 missions, 8 science themes, 28 cited
+  sources, 14 bundled NASA images.
+- Validator that enforces schema, foreign keys, coordinate ranges, media
+  metadata, dates and verification consistency (currently PASS, 0/0).
+- Complete UI: Home, Relic Explorer (search + 5 filters + 4 sorts), Artifact
+  detail (8 story sections), Planetary map (Moon/Mars, schematic but
+  coordinate-accurate), Mission timeline (52 events), Science Legacy (8 themes),
+  Compare (2 artifacts × 11 attributes), About & Sources.
+- Single-file production build (~3.54 MB) that runs from the filesystem offline.
+- Project-management documents: PROJECT_PLAN.txt, PROGRESS.txt, CHANGELOG.txt,
+  RESEARCH_SOURCES.txt, DATA_AUDIT.txt, README.md, PRESENTATION.md.
+
+--------------------------------------------------------------------------------
+3. WHICH FILES MATTER
+--------------------------------------------------------------------------------
+  scripts/build-data.py      AUTHORING SOURCE for the whole dataset. Edit here.
+  src/data/*.json            GENERATED. Never hand-edit.
+  scripts/validate-data.mjs  Must exit 0 before any delivery.
+  scripts/build-docs.py      Regenerates RESEARCH_SOURCES.txt + DATA_AUDIT.txt.
+  src/utils/data.js          The only data access layer (enrichment + queries).
+  src/components/PlanetMap.jsx   Schematic map: projection, fit, markers.
+  src/pages/*.jsx            One file per screen.
+  src/styles/global.css      All design tokens and layout.
+  vite.config.js             Single-file build (vite-plugin-singlefile).
+  dist/index.html            The deliverable build.
+
+--------------------------------------------------------------------------------
+4. WHAT WAS DONE IN THE LATEST SESSION
+--------------------------------------------------------------------------------
+Everything. This was the first session: environment inspection, full research
+pass over all 12 brief candidates (+1 addition), dataset construction and
+validation, entire UI implementation, QA (headless Chromium route/DOM checks,
+screenshot review on desktop and 400 px mobile), all six management files, and
+the presentation content. See CHANGELOG.txt for the itemised list.
+
+--------------------------------------------------------------------------------
+5. WHAT REMAINS UNFINISHED
+--------------------------------------------------------------------------------
+Nothing required. Optional extensions (all documented in PROGRESS.txt PENDING):
+  - Photographic planetary basemap (blocked in this environment).
+  - More artifact records (Apollo 12 ALSEP, Viking 2, Apollo 16 ALSEP, …).
+  - Published coordinates for Spirit/Opportunity/Sojourner final positions.
+  - Component unit tests, cross-browser pass.
+
+--------------------------------------------------------------------------------
+6. KNOWN ERRORS AND LIMITATIONS
+--------------------------------------------------------------------------------
+No known runtime errors. Limitations, all stated in the product itself:
+  - The map is a schematic equirectangular plot, not imagery.
+  - Four markers are site-level rather than artifact-level.
+  - Mars Pathfinder has three published coordinate sets and Viking 1 two; the
+    disagreements are printed in the records.
+  - Apollo 17 rover distance: 35.7 km (odometer) vs 31.2 km (recomputed path).
+  - All sources are recorded as "excerpt" read level — honest, not overstated.
+  - Dataset is curated and finite.
+
+--------------------------------------------------------------------------------
+7. EXACT NEXT STEPS
+--------------------------------------------------------------------------------
+If adding a record:
+  1. Append an art(...) block in scripts/build-data.py following an existing one.
+  2. Add any new source to SOURCES with source_id, read_level and supports[].
+  3. Add an image: fetch by NASA id from images-api.nasa.gov into
+     src/assets/images/<slug>.jpg, then reference the filename in media[].
+  4. python3 scripts/build-data.py && npm run validate && python3 scripts/build-docs.py
+  5. npm run build, then verify with
+     chromium --headless=new --dump-dom "file://$PWD/dist/index.html#/explorer".
+If changing UI: rebuild and screenshot the affected route; do not regress the
+hero legibility, the map label logic or the mobile breakpoints.
+
+--------------------------------------------------------------------------------
+8. DO NOT REPEAT
+--------------------------------------------------------------------------------
+- Do not re-research the 13 existing artifacts; their facts and sources are done.
+- Do not rebuild the project scaffold or change the stack.
+- Do not rewrite src/data/*.json by hand.
+- Do not add a backend, auth, a database or a live API dependency.
+- Do not "improve" the map by inventing terrain or coastline.
+
+--------------------------------------------------------------------------------
+9. INSPECT BEFORE MODIFYING
+--------------------------------------------------------------------------------
+Run, in this order: ls, PROGRESS.txt, PROJECT_PLAN.txt (sections 3–5 and 10),
+CHANGELOG.txt (latest entry), then open the specific file you intend to change.
+If the handoff documents disagree with the actual files, trust the files and
+correct the documents.

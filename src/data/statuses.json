@@ -1,0 +1,17 @@
+[
+ {
+  "id": "left_on_surface",
+  "label": "Left on the surface",
+  "blurb": "Hardware still physically present where the mission ended it. All such records here are inactive unless stated otherwise."
+ },
+ {
+  "id": "still_partly_operational",
+  "label": "Partly still operational",
+  "blurb": "Some elements of the hardware continue to function or be used today."
+ },
+ {
+  "id": "partially_retrieved",
+  "label": "Partially retrieved",
+  "blurb": "Most of the hardware remains in place, but components were removed and returned to Earth."
+ }
+]

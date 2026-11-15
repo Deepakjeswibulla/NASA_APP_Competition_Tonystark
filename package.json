@@ -1,0 +1,23 @@
+{
+  "name": "space-relics",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "description": "SPACE RELICS - The Machines That Stayed Behind. NASA Space Apps Challenge 2026.",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "validate": "node scripts/validate-data.mjs"
+  },
+  "dependencies": {
+    "lucide-react": "^0.451.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^4.3.1",
+    "vite": "^5.4.8",
+    "vite-plugin-singlefile": "^2.0.2"
+  }
+}

@@ -1,0 +1,18 @@
+[
+ {
+  "id": "Moon",
+  "name": "Moon",
+  "radius_km": 1737.4,
+  "map_label": "Selenographic coordinates, mean Earth / polar axis frame",
+  "blurb": "The only other world humans have walked on. Six Apollo landing sites and a scatter of robotic precursors sit within about 30° of the equator on the near side.",
+  "context": "Coordinates are selenographic latitude and longitude in the mean Earth/polar-axis frame used by the NASA NSSDC landings table and the LROC survey of anthropogenic features."
+ },
+ {
+  "id": "Mars",
+  "name": "Mars",
+  "radius_km": 3389.5,
+  "map_label": "Areographic coordinates, planetocentric",
+  "blurb": "Nine landed missions in this archive, spread across more than 200° of longitude — from Chryse Planitia to Gusev crater to Elysium.",
+  "context": "Coordinates are planetocentric areographic latitude and east longitude, as published by the mission sources for each site."
+ }
+]

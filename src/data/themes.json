@@ -1,0 +1,58 @@
+[
+ {
+  "id": "lunar-geology",
+  "name": "Lunar geology & the rock record",
+  "short": "Lunar geology",
+  "summary": "Sample-return traverses and surface imaging that established the Moon's stratigraphy, its magma ocean history and the age of its great plains.",
+  "long": "Before Apollo, the Moon's history was inferred from telescopes. Rovers and surface experiments turned it into a measurable rock record: anorthositic highlands, mare basalts, impact breccias and pyroclastic glass, each dated in terrestrial laboratories against a calibration that still underpins crater-counting ages across the solar system."
+ },
+ {
+  "id": "seismology",
+  "name": "Seismology & planetary interiors",
+  "short": "Seismology",
+  "summary": "Instruments that listened to the ground and revealed the internal structure of the Moon and Mars.",
+  "long": "Seismometers left on two worlds turned whole planets into measurable objects. The Apollo network located moonquakes and fixed the size of the lunar core; InSight's SEIS did the same for Mars, measuring crustal thickness and a liquid core from a single station."
+ },
+ {
+  "id": "solar-cosmic",
+  "name": "Solar particles & the space environment",
+  "short": "Space environment",
+  "summary": "Detectors that measured what the Sun and the galaxy throw at an unprotected surface.",
+  "long": "With no atmosphere or global magnetic field, the lunar surface is exposed directly to solar wind, solar energetic particles and galactic cosmic rays. Instruments deployed by Apollo measured those fluxes in situ, providing the first ground-truth for space-weather models used in planning crews and hardware."
+ },
+ {
+  "id": "atmosphere",
+  "name": "Atmospheres, weather & climate",
+  "short": "Atmospheres & weather",
+  "summary": "Weather stations and atmosphere experiments that made other worlds' climates ordinary, measurable things.",
+  "long": "Landers carrying pressure, temperature and wind sensors converted alien skies into daily weather reports. Those records — some running for years — are still the longest surface climate series we have for Mars."
+ },
+ {
+  "id": "water-habitability",
+  "name": "Water & ancient habitability",
+  "short": "Water & habitability",
+  "summary": "Surface chemistry and mineralogy that showed liquid water once persisted on Mars.",
+  "long": "Rovers and landers read the chemistry of rocks and soils to test whether Mars was ever habitable. Hematite concretions, salty sediments, sulphate veins and silica deposits each record a different episode of water-rock interaction, and each was measured by hardware that is still sitting where it made the measurement."
+ },
+ {
+  "id": "surface-mobility",
+  "name": "Surface mobility & exploration engineering",
+  "short": "Mobility & engineering",
+  "summary": "Rovers and mobility systems that extended human and robotic reach across two worlds.",
+  "long": "Mobility changed what a mission could be. The Lunar Roving Vehicle multiplied the area astronauts could sample; Sojourner proved a small rover could work on Mars; Spirit and Opportunity turned a 90-day experiment into a decade-long traverse across tens of kilometres."
+ },
+ {
+  "id": "astronomy",
+  "name": "Astronomy from another world",
+  "short": "UV astronomy",
+  "summary": "The first astronomical observatory placed on the surface of another planetary body.",
+  "long": "The Moon is a stable, atmosphere-free platform. The Apollo 16 far-ultraviolet camera used it to image the Earth's hydrogen geocorona, aurorae and airglow, and to record stars, nebulae and the Large Magellanic Cloud in a wavelength band no ground telescope can reach."
+ },
+ {
+  "id": "space-weathering",
+  "name": "Long-duration exposure & materials",
+  "short": "Space weathering",
+  "summary": "Hardware that spent years in vacuum, radiation and thermal cycling, then came back to be examined.",
+  "long": "Surveyor 3 sat on the Moon for 31 months before Apollo 12 astronauts cut pieces off it and brought them home. That returned hardware is one of the few direct measurements of how materials, coatings and seals actually age on another world."
+ }
+]

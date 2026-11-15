@@ -1,0 +1,327 @@
+SPACE RELICS — RESEARCH SOURCES (BIBLIOGRAPHY)
+=============================================
+
+Compiled: 2026-11-15
+Total sources: 28
+
+HOW TO READ THIS FILE
+  read_level = full_text   the source document was read in full
+  read_level = excerpt     the relevant passage was retrieved and read, not the whole document
+A URL resolving is NOT treated as verification. Every entry records which claims it supports.
+
+SOURCE PRIORITY USED
+  1. NASA mission pages and official NASA documents
+  2. NASA technical reports and archives (NTRS, PDS, NSSDC)
+  3. NASA image and video library
+  4. NASA-supported research repositories (LROC/GSFC/ASU)
+  5. Peer-reviewed scientific papers
+  6. Other reputable scientific institutions, where necessary
+
+==============================================================================
+
+[S01] Apollo Lunar Landings (1969 - 1972)
+  Organization / author : NASA NSSDC
+  Type                  : NASA data archive
+  URL                   : https://nssdc.gsfc.nasa.gov/planetary/lunar/apolloland.html
+  Publication date      : n.d.
+  Date accessed         : 2026-11-15
+  Read level            : excerpt
+  Claims supported:
+    - Apollo landing dates, sites and selenographic coordinates (DE421 mean Earth frame)
+
+[S02] Spacecraft Related Coordinates - 2016 Update (Wagner et al., Icarus)
+  Organization / author : LROC / NASA GSFC / ASU
+  Type                  : Peer-reviewed + NASA instrument team
+  URL                   : https://www.lroc.im-ldi.com/images/938
+  Publication date      : 2016
+  Date accessed         : 2026-11-15
+  Read level            : excerpt
+  Claims supported:
+    - Surveyed positions of Apollo hardware (LM, ALSEP, LRV) with ~15 m uncertainty
+
+[S03] Apollo 11 Preliminary Science Report - Passive Seismic Experiment section
+  Organization / author : NASA (via PDS Geosciences Node)
+  Type                  : NASA technical report
+  URL                   : https://an.rsl.wustl.edu/apollo/data/a11/stationLM/pse/docs/pse_psr.pdf
+  Publication date      : 1969
+  Date accessed         : 2026-11-15
+  Read level            : excerpt
+  Claims supported:
+    - EASEP/PSEP mass, deployment distance from the LM, 21-day operation, 27 Aug 1969 turn-off
+
+[S04] ALSEP Termination Report (NASA Reference Publication 1036)
+  Organization / author : NASA
+  Type                  : NASA technical report
+  URL                   : https://an.rsl.wustl.edu/apollo/data/A14/resources/ALSEP_termination.pdf
+  Publication date      : 1979-04
+  Date accessed         : 2026-11-15
+  Read level            : excerpt
+  Claims supported:
+    - ALSEP station coordinates, activation times, experiment list, 30 Sep 1977 termination, ASE depth
+
+[S05] Surveyor 3 - Mission Overview
+  Organization / author : NASA Science
+  Type                  : NASA mission page
+  URL                   : https://science.nasa.gov/mission/surveyor-3/
+  Publication date      : n.d.
+  Date accessed         : 2026-11-15
+  Read level            : excerpt
+  Claims supported:
+    - Surveyor 3 launch/landing/last-contact dates, landing region, 6,326 images, Apollo 12 visit
+
+[S06] Footpads and Footprints: Humans and Machine Meet on the Moon
+  Organization / author : NASA Science
+  Type                  : NASA feature article
+  URL                   : https://science.nasa.gov/earth/moon/footpads-and-footprints-humans-and-machine-meet-on-the-moon/
+  Publication date      : n.d.
+  Date accessed         : 2026-11-15
+  Read level            : excerpt
+  Claims supported:
+    - Surveyor 3 soil-mechanics result, distance from Apollo 12 LM, parts returned to Earth
+
+[S07] Analysis of Surveyor 3 Material and Photographs Returned by Apollo 12
+  Organization / author : NASA (NTRS 19720019081)
+  Type                  : NASA technical report
+  URL                   : https://ntrs.nasa.gov/citations/19720019081
+  Publication date      : 1972
+  Date accessed         : 2026-11-15
+  Read level            : excerpt
+  Claims supported:
+    - Inventory of hardware removed from Surveyor 3, selenographic coordinates, 31 months exposure
+
+[S08] Apollo 15: A Mission of Many Firsts
+  Organization / author : LROC / NASA GSFC / ASU
+  Type                  : NASA instrument team article
+  URL                   : https://lroc.im-ldi.com/images/1198
+  Publication date      : 2021-07-30
+  Date accessed         : 2026-11-15
+  Read level            : excerpt
+  Claims supported:
+    - LRV traverse distances per EVA, final parking site ~160 m east of the LM, 27.9 km total
+
+[S09] Apollo 15 Mission Report, Chapter 1
+  Organization / author : NASA (Apollo Lunar Surface Journal mirror)
+  Type                  : NASA mission report
+  URL                   : https://www.apollojournals.org/alsj/a15/a15mr-1.htm
+  Publication date      : 1971
+  Date accessed         : 2026-11-15
+  Read level            : excerpt
+  Claims supported:
+    - Apollo 15 landing coordinates, EVA traverse distances, samples returned
+
+[S10] Remembering the First Moon-Based Telescope
+  Organization / author : NASA History
+  Type                  : NASA history article
+  URL                   : https://www.nasa.gov/history/remembering-the-first-moon-based-telescope/
+  Publication date      : 2019-07-15
+  Date accessed         : 2026-11-15
+  Read level            : excerpt
+  Claims supported:
+    - Apollo 16 FUV camera deployment, 178 film frames, instrument remains on the Moon
+
+[S11] Apollo 16 Far-Ultraviolet Camera/Spectrograph: Earth Observations
+  Organization / author : Carruthers & Page, Science 177(4051):788
+  Type                  : Peer-reviewed paper
+  URL                   : https://doi.org/10.1126/science.177.4051.788
+  Publication date      : 1972-09-01
+  Date accessed         : 2026-11-15
+  Read level            : excerpt
+  Claims supported:
+    - Geocorona, auroral and airglow results from the Apollo 16 UV experiment
+
+[S12] Coordinates and Maps of the Apollo 17 Landing Site
+  Organization / author : Haase et al., Earth and Space Science 6
+  Type                  : Peer-reviewed paper
+  URL                   : https://doi.org/10.1029/2018EA000408
+  Publication date      : 2019
+  Date accessed         : 2026-11-15
+  Read level            : excerpt
+  Claims supported:
+    - Apollo 17 traverse distances recomputed from imagery (31.204 km) vs odometer readings
+
+[S13] Mars Pathfinder Mission Description (PDS archive)
+  Organization / author : NASA PDS / JPL
+  Type                  : NASA mission archive
+  URL                   : https://planetarydata.jpl.nasa.gov/img/data/mpf/rover/mprv_0001/document/mission.htm
+  Publication date      : n.d.
+  Date accessed         : 2026-11-15
+  Read level            : excerpt
+  Claims supported:
+    - Pathfinder landing site, rover deployment time, lander last data 27 Sep 1997, instruments
+
+[S14] Mars Pathfinder press kit / mission summary
+  Organization / author : NASA
+  Type                  : NASA mission document
+  URL                   : https://mars.nasa.gov/internal_resources/815/
+  Publication date      : 1997
+  Date accessed         : 2026-11-15
+  Read level            : excerpt
+  Claims supported:
+    - Landing coordinates 19.13 N 33.22 W, bounce sequence, sol 83 last transmission, rover survival
+
+[S15] Mars Pathfinder Landing Site (PIA01124)
+  Organization / author : NASA JPL Photojournal
+  Type                  : NASA image caption
+  URL                   : https://www.jpl.nasa.gov/images/pia01124-mars-pathfinder-landing-site/
+  Publication date      : 1997-12-12
+  Date accessed         : 2026-11-15
+  Read level            : excerpt
+  Claims supported:
+    - Coordinate-frame discrepancy for the Pathfinder site (19.17 N 33.21 W USGS frame)
+
+[S16] Spirit - Mission Overview
+  Organization / author : NASA Science
+  Type                  : NASA mission page
+  URL                   : https://science.nasa.gov/mission/mer-spirit/
+  Publication date      : n.d.
+  Date accessed         : 2026-11-15
+  Read level            : excerpt
+  Claims supported:
+    - Spirit landing date, 7.73 km odometry, Troy embedding, last contact 22 Mar 2010, recovery end 25 May 2011
+
+[S17] Mars Exploration Rover Spirit End of Mission Report (JPL Publication 16-2)
+  Organization / author : NASA JPL
+  Type                  : NASA technical report
+  URL                   : https://ntrs.nasa.gov/api/citations/20160001767/downloads/20160001767.pdf
+  Publication date      : 2015-12
+  Date accessed         : 2026-11-15
+  Read level            : excerpt
+  Claims supported:
+    - Spirit embedding at Troy (sol 1886), loss of signal sol 2210, recovery effort details
+
+[S18] Opportunity - Mission Overview
+  Organization / author : NASA Science
+  Type                  : NASA mission page
+  URL                   : https://science.nasa.gov/mission/mer-opportunity/
+  Publication date      : n.d.
+  Date accessed         : 2026-11-15
+  Read level            : excerpt
+  Claims supported:
+    - Opportunity dates, 45.16 km odometry, Perseverance Valley final location, distance record history
+
+[S19] NASA's Record-Setting Opportunity Rover Mission on Mars Comes to End
+  Organization / author : NASA
+  Type                  : NASA news release
+  URL                   : https://www.nasa.gov/news-release/nasas-record-setting-opportunity-rover-mission-on-mars-comes-to-end/
+  Publication date      : 2019-02-13
+  Date accessed         : 2026-11-15
+  Read level            : excerpt
+  Claims supported:
+    - Opportunity end of mission, final communication 10 Jun 2018, 90-sol/1,000 m design life
+
+[S20] InSight Lander - Mission Overview
+  Organization / author : NASA Science
+  Type                  : NASA mission page
+  URL                   : https://science.nasa.gov/mission/insight/
+  Publication date      : n.d.
+  Date accessed         : 2026-11-15
+  Read level            : excerpt
+  Claims supported:
+    - InSight launch/landing dates, Elysium Planitia landing site coordinates, end of mission
+
+[S21] NASA Retires InSight Mars Lander Mission After Years of Science
+  Organization / author : NASA
+  Type                  : NASA news release
+  URL                   : https://www.nasa.gov/missions/insight/nasa-retires-insight-mars-lander-mission-after-years-of-science/
+  Publication date      : 2022-12-21
+  Date accessed         : 2026-11-15
+  Read level            : excerpt
+  Claims supported:
+    - 1,319 marsquakes detected, last contact 15 Dec 2022, dead-bus end of mission
+
+[S22] SEIS / InSight seismic network metadata (XB network)
+  Organization / author : IPGP Data Center / IRIS
+  Type                  : Science data centre
+  URL                   : https://datacenter.ipgp.fr/networks/detail/XB_2016/
+  Publication date      : n.d.
+  Date accessed         : 2026-11-15
+  Read level            : excerpt
+  Claims supported:
+    - Precise InSight station coordinates 4.502384 N, 135.623447 E (Mars 2000 frame)
+
+[S23] Viking 1 - Mission Overview
+  Organization / author : NASA Science
+  Type                  : NASA mission page
+  URL                   : https://science.nasa.gov/mission/viking-1/
+  Publication date      : n.d.
+  Date accessed         : 2026-11-15
+  Read level            : excerpt
+  Claims supported:
+    - Viking 1 landing date/coordinates, lander operations to 11 Nov 1982, Mutch Memorial Station naming
+
+[S24] Viking 1 Lander on the surface of Mars - Revised location
+  Organization / author : Morris, E.C., Icarus 44 (NTRS 19810041868)
+  Type                  : Peer-reviewed paper
+  URL                   : https://ntrs.nasa.gov/citations/19810041868
+  Publication date      : 1980-10
+  Date accessed         : 2026-11-15
+  Read level            : excerpt
+  Claims supported:
+    - Revised Viking 1 lander coordinates 22.483 N, 47.968 W
+
+[S25] Apollo 14 Press Kit
+  Organization / author : NASA
+  Type                  : NASA press kit
+  URL                   : http://www.ibiblio.org/apollo/Documents/1APOLLO14.pdf
+  Publication date      : 1971-01
+  Date accessed         : 2026-11-15
+  Read level            : excerpt
+  Claims supported:
+    - ALSEP Array C experiment list and objectives (PSE, ASE, SIDE, CCIG, CPLEE)
+
+[S26] 50 Years Ago: Apollo 14 Lands at Fra Mauro
+  Organization / author : NASA History
+  Type                  : NASA history article
+  URL                   : https://www.nasa.gov/history/50-years-ago-apollo-14-lands-at-fra-mauro/
+  Publication date      : 2021-02-04
+  Date accessed         : 2026-11-15
+  Read level            : excerpt
+  Claims supported:
+    - Apollo 14 ALSEP deployment distance from the LM, active seismic experiment operation
+
+[S27] NASA Image and Video Library
+  Organization / author : NASA
+  Type                  : NASA media archive
+  URL                   : https://images.nasa.gov/
+  Publication date      : n.d.
+  Date accessed         : 2026-11-15
+  Read level            : excerpt
+  Claims supported:
+    - All artifact photography used in this application (per-image IDs and captions in media records)
+  Reliability notes     : Each media record carries its own images.nasa.gov/details/<ID> link and the catalogue description string.
+
+[S28] Surveyor to the Moon (1966 - 1968)
+  Organization / author : NASA NSSDC
+  Type                  : NASA data archive
+  URL                   : https://nssdc.gsfc.nasa.gov/planetary/lunar/surveyor.html
+  Publication date      : n.d.
+  Date accessed         : 2026-11-15
+  Read level            : excerpt
+  Claims supported:
+    - Surveyor 3 landing coordinates in the older NSSDC frame (3.01 S, 336.66 E)
+
+==============================================================================
+UNRESOLVED CONTRADICTIONS BETWEEN SOURCES
+==============================================================================
+
+[surveyor-3] Sources give the Apollo 12 LM's distance from Surveyor 3 as 155 m (NASA Science feature) and 180 m (Surveyor 3 mission page); both are recorded, the closer figure is used in the narrative with the range shown.
+
+[surveyor-3] Mass of returned material is quoted as 'about 10 kg' by the Smithsonian summary of the mission; the 1972 NASA report lists the individual items instead of a total.
+
+[apollo-14-alsep] The deployment distance is given as about 600 ft (180 m) by NASA History; the seismic-station catalogue lists the seismometer 178 m from the lunar module. Both agree within a few metres.
+
+[apollo-15-lrv] Some popular sources quote 27.9 km, others 28.1 km for the same traverse; the mission report and LROC both give 27.9 km, which is used here.
+
+[apollo-16-fuv-camera] Mass is quoted as 22 kg in the instrument literature and as '50 pounds' in one NASA feature; these agree, and 22 kg is used.
+
+[apollo-17-lrv] The 35.7 km figure comes from the rover odometer. A 2019 photogrammetric reconstruction of the traverses gives 31.2 km of actual ground path, about 2 km longer than the mapped profile in the same study — the odometer over-reads. Both values are recorded here rather than one being silently chosen.
+
+[mars-pathfinder-lander] The landing coordinates are recorded with an explicit discrepancy between NASA, NSSDC and JPL/Photojournal values; the marker is therefore marked approximate.
+
+[sojourner-rover] Total odometry is usually quoted as 'about 100 m'; a precise published odometer total was not found in the sources reviewed.
+
+[spirit-rover] NASA Science gives the end of recovery efforts as 25 May 2011; the JPL end-of-mission report describes recovery activity concluding on 13 July 2011. Both are recorded.
+
+[insight-lander] The heat-probe failure depth is reported as about 40 cm in the mission literature; the instrument's exact final depth is not quoted here.
+
+[viking-1-lander] Two coordinate sets are published for this site (see map note); the discrepancy is recorded rather than resolved silently.
